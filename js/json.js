@@ -5,7 +5,7 @@
 var json = {
 	"book1": {
 		"genre": ["Genre:", "Sci Fi & Fantasy"],
-		"btitle": ["Book Title:", "Burned"],
+		"btitle": ["Book Title:", "Void"],
 		"author": ["Author:", "J.F. Lewis"],
 		"isbn": ["ISBN:", "978-1-4516-5186-7"],
 		"comments": ["Comments:", "Cool"],
