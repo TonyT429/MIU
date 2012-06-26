@@ -2,7 +2,6 @@
 // Project 4
 // Anthony Torrez
 
-
 // Wait until the DOM is ready.
 window.addEventListener("DOMContentLoaded", function() {
 // alert (localStorage.value(0));
