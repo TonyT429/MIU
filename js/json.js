@@ -1,12 +1,11 @@
-// VFW 1206 
-// Project 4
+// MIU 1207 
+// Project 
 // Anthony Torrez
-
 
 var json = {
 	"book1": {
 		"genre": ["Genre:", "Sci Fi & Fantasy"],
-		"btitle": ["Book Title:", "Void"],
+		"btitle": ["Book Title:", "Burned"],
 		"author": ["Author:", "J.F. Lewis"],
 		"isbn": ["ISBN:", "978-1-4516-5186-7"],
 		"comments": ["Comments:", "Cool"],
