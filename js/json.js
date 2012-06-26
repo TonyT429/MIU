@@ -35,8 +35,7 @@ var json = {
 		"seriesname": ["Series Name:", ""],
 		"seriesnum": ["Series Number:", ""],
 		"date": ["Date:", "7-4-2011"]
-	}
-}
+	},
 	"book4": {
 		"genre": ["Genre:", "Education & Reference"],
 		"btitle": ["Book Title:", "Rich Dad, Poor Dad"],
@@ -69,8 +68,7 @@ var json = {
 		"seriesname": ["Series Name:", ""],
 		"seriesnum": ["Series Number:", ""],
 		"date": ["Date:", "2001-11-25"]
-	}
-}
+	},
 	"book7": {
 		"genre": ["Genre:", "Education & Reference"],
 		"btitle": ["Book Title:", "The 21 irrefutable Laws of Leadership"],
@@ -103,8 +101,7 @@ var json = {
 		"seriesname": ["Series Name:", ""],
 		"seriesnum": ["Series Number:", ""],
 		"date": ["Date:", "2012-06-19"]
-	}
-}
+	},
 	"book10": {
 		"genre": ["Genre:", "Cookbooks, Food & Wine"],
 		"btitle": ["Book Title:", "The Best From The Bottle"],
@@ -137,8 +134,7 @@ var json = {
 		"seriesname": ["Series Name:", ""],
 		"seriesnum": ["Series Number:", ""],
 		"date": ["Date:", "2001-09-13"]
-	}
-}
+	},
 	"book13": {
 		"genre": ["Genre:", "Medical"],
 		"btitle": ["Book Title:", "Get Control of Your Blood Sugar"],
@@ -171,8 +167,7 @@ var json = {
 		"seriesname": ["Series Name:", ""],
 		"seriesnum": ["Series Number:", ""],
 		"date": ["Date:", "09-10-2011"]
-	}
-}
+	},
 	"book16": {
 		"genre": ["Genre:", "Medical"],
 		"btitle": ["Book Title:", "Low Cost Natural Cures for Your Dog and Cat"],
@@ -205,8 +200,7 @@ var json = {
 		"seriesname": ["Series Name:", "A Werewolf Named Kitty"],
 		"seriesnum": ["Series Number:", "1"],
 		"date": ["Date:", "7-4-2011"]
-	}
-}
+	},
 	"book19": {
 		"genre": ["Genre:", "Sci Fi & Fantasy"],
 		"btitle": ["Book Title:", "Kitty and the Dead Man's Hand"],
@@ -239,8 +233,7 @@ var json = {
 		"seriesname": ["Series Name:", "A Werewolf Named Kitty"],
 		"seriesnum": ["Series Number:", "3"],
 		"date": ["Date:", "2007-07-03"]
-	}
-}
+	},
 	"book22": {
 		"genre": ["Genre:", "Medical"],
 		"btitle": ["Book Title:", "Reversing Diabetes"],
@@ -273,7 +266,7 @@ var json = {
 		"seriesname": ["Series Name:", "Riley Jenson Guardian"],
 		"seriesnum": ["Series Number:", "2"],
 		"date": ["Date:", "2007-02-20"]
-	}
+	},
 	"book25": {
 		"genre": ["Genre:", "Sci Fi & Fantasy"],
 		"btitle": ["Book Title:", "Full Moon Rising"],
@@ -295,7 +288,7 @@ var json = {
 		"seriesname": ["Series Name:", "Riley Jenson Guardian"],
 		"seriesnum": ["Series Number:", "4"],
 		"date": ["Date:", "2007-04-29"]
-	}
+	},
 	"book27": {
 		"genre": ["Genre:", "Sci Fi & Fantasy"],
 		"btitle": ["Book Title:", "Tempting Evil"],
