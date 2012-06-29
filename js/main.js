@@ -156,6 +156,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	function editItem( ) {
 		// take the item data from local storage
 		var value = localStorage.getItem( this.key );
+		console.log(getItem(this.key);
 		var item = JSON.parse( value );
 		var save = MiU ( 'submit' );
         
@@ -335,7 +336,12 @@ window.addEventListener("DOMContentLoaded", function() {
 	
 	var goBack = MiU ( 'back' );
 	back.addEventListener ( 'click', Back );  
-	
+
+/*
+	// dropdown for browsing by genre
+	var byGenre = MiU ( 'byGenre' );
+	byGenre.addEventListener ( 'click', makeCats());
+*/	
 	 	// Search
 	var search = MiU('searchBtn');
 	
