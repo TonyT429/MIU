@@ -23,6 +23,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			makeSelect = document.createElement( 'select' );
 			makeSelect.setAttribute( 'id', 'genre' );
 		for (var i=0, j=genreTypes.length; i<j; i++) {
+			console.log(genreTypes);
 			var makeOption = document.createElement( 'option' );
 			var optText = genreTypes[ i ];
 			makeOption.setAttribute( 'value', optText );
@@ -156,7 +157,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	function editItem( ) {
 		// take the item data from local storage
 		var value = localStorage.getItem( this.key );
-		console.log(getItem(this.key);
+//		console.log(getItem(this.key);
 		var item = JSON.parse( value );
 		var save = MiU ( 'submit' );
         
@@ -341,7 +342,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	// dropdown for browsing by genre
 	var byGenre = MiU ( 'byGenre' );
 	byGenre.addEventListener ( 'click', makeCats());
-*/	
+*/
 	 	// Search
 	var search = MiU('searchBtn');
 	
