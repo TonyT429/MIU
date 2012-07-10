@@ -1,0 +1,87 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Mobile Site Template</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="css/style.css />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	
+	<!--
+	<input type="image" src="images/ByGenre.png" name= "byGenre" id="byGenre" /><br />
+	<a href="underConstruction.html" title="underConstruction"><input type="image" src="images/ByAuthor.png" name="byAuthor" id="byAuthor" /><br />
+	<a href="underConstruction.html" title="underConstruction"><input type="image" src="images/ByBook.png" name="byBookTitle" id="byBookTitle" /><br />
+	-->
+
+</head>
+<body>
+	<div data-role="page" id="home">
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Books I Own</h1>
+			<input type="text" name="search" id="searchBtn" /><label for="search"> Search</label><br />
+		</div>
+		
+		<div data-role="content">
+			<img src="images/bookstore.png">
+			<p><a href="additem.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Add a Book Now</a></p>
+			
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+		
+				<ul>
+					<li><a href="#underConst" >By Genre</a></li>
+					<li><a href="underConstruction.html" >By Author</a></li>
+					<li><a href="underConstruction.html" >By Title</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	<div data-role="page" id="underConst" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>Sorry!</h1>
+		</div>
+		<div data-role="content">
+			<img src="images/diy_puppy.png">
+			<p>Requested Page is Under Construction!</p>
+			<p>Free image courtesy of FreeDigitalPhotos.net</p>
+		<p>Image: <a href="http://www.freedigitalphotos.net" target="_blank">FreeDigitalPhotos.net</a></p>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="page2">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#underConst" >By Genre</a></li>
+					<li><a href="#underConst" >By Author</a></li>
+					<li><a href="#underConst" >By Title</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
