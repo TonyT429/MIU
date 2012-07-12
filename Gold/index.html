@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8">
 	
-	<title>Mobile Site Template</title>
+	<title>Gold Index</title>
 	
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="HandheldFriendly" content="True">
@@ -16,45 +16,41 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-	<link rel="stylesheet" href="css/style.css />
+	<link rel="stylesheet" href="css/styles.css />
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
 	
-	<!--
-	<input type="image" src="images/ByGenre.png" name= "byGenre" id="byGenre" /><br />
-	<a href="underConstruction.html" title="underConstruction"><input type="image" src="images/ByAuthor.png" name="byAuthor" id="byAuthor" /><br />
-	<a href="underConstruction.html" title="underConstruction"><input type="image" src="images/ByBook.png" name="byBookTitle" id="byBookTitle" /><br />
-	-->
 
 </head>
 <body>
+<!-- Home Page -->
 	<div data-role="page" id="home">
 		<div data-role="header" data-position="fixed" data-theme="e">
 			<h1>Books I Own</h1>
-			<input type="text" name="search" id="searchBtn" /><label for="search"> Search</label><br />
+			<label for="search-basic">Search:</label>
+			<input type="search" name="search" id="search-basic" value="" />
 		</div>
 		
 		<div data-role="content">
 			<img src="images/bookstore.png">
-			<p><a href="additem.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Add a Book Now</a></p>
-			
+			<p><a href="additem.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">Add a Book Now</a></p>
+			<p><a href="#test" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e" value="Test" id="test" data-ajax="false">Go to Test Page</a></p>
+			<p><a href="#test2" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e" value="Test" id="test2" data-ajax="false">Go to Test Page 2</a></p>
+			<p><a href="../Bronze/index.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e" value="Test" id="test" data-ajax="false">Go to Bronze Page</a></p>	
 		</div>
 		
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
-		
 				<ul>
-					<li><a href="#underConst" >By Genre</a></li>
-					<li><a href="underConstruction.html" >By Author</a></li>
-					<li><a href="underConstruction.html" >By Title</a></li>
+					<li><a href="#by_genre" >By Genre</a></li>
+					<li><a href="#by_author" >By Author</a></li>
+					<li><a href="#by_title" >By Title</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	
-
-	
+<!-- Under Construction Page -->
 	<div data-role="page" id="underConst" data-add-back-btn="true">
 		<div data-role="header" data-position="fixed">
 			<h1>Sorry!</h1>
@@ -69,18 +65,369 @@
 		<div data-role="footer" data-position="fixed" data-id="page2">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#underConst" >By Genre</a></li>
-					<li><a href="#underConst" >By Author</a></li>
-					<li><a href="#underConst" >By Title</a></li>
+					<li><a href="#by_genre" >By Genre</a></li>
+					<li><a href="#by_author" >By Author</a></li>
+					<li><a href="#by_title" >By Title</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-
+<!-- Browse by Genre Page -->
+	<div data-role="page" id="by_genre" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>By Genre</h1>
+		</div>	
+			
+		<div data-role="collapsible-set">
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Art & Photography.png" />
+				<h4>Art & Photography</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<h4>Biographies & Memoirs</h4>
+				<img src="images/Biographies & Memoirs.png" />
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Children's Books.png" />
+				<h4>Children"s Books</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Computers & Technology.png" />
+				<h4>Computers & Technology</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Cookbooks, Food & Wine.png" />
+				<h4>Cookbooks, Food & Wine</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Crafts, Hobbies & Home.png" />
+				<h4>Crafts, Hobbies & Home</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Education & Reference.png" />
+				<h4>Education & Reference</h4> 
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Health, Fitness & Dieting.png" />
+				<h4>Health, Fitness & Dieting</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/History.png" />
+				<h4>History</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Horror.png" />
+				<h4>Horror</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Humor.png" />
+				<h4>Humor</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Law.png" />
+				<h4>Law</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Literature & Fiction.png" />
+				<h4>Literature & Fiction</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Manga & Graphic Novels.png" />
+				<h4>Manga & Graphic Novels</h4> 
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Math & Science.png" />
+				<h4>Math & Science</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Medical.png" />
+				<h4>Medical</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Mystery, Crime, Thriller & Suspense.png" />
+				<h4>Mystery, Crime, Thriller & Suspense</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Parenting & Relationships.png" />
+				<h4>Parenting & Relationships</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Religion & Spirituality.png" />
+				<h4>Religion & Spirituality</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Romance.png" />
+				<h4>Romance</h4> 
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Sci Fi & Fantasy.png" />
+				<h4>Sci Fi & Fantasy</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Self Help.png" />
+				<h4>Self Help</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Sports & Outdoors.png" />
+				<h4>Sports & Outdoors</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Teens.png" />
+				<h4>Teens</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Travel.png" />
+				<h4>Travel</h4>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<img src="images/Western.png" />
+				<h4>Western</h4>
+			</div>
+		</div>
+			
+		<div data-role="footer" data-position="fixed" data-id="page2">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#by_genre" >By Genre</a></li>
+					<li><a href="#by_author" >By Author</a></li>
+					<li><a href="#by_title" >By Title</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- Browse by Author Page -->
+	<div data-role="page" id="by_author" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>By Author</h1>
+		</div>		
+		<div data-role="content">		
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h3>a stack of comic books</h3>
+					<p>some old ones but few worth anything</p>
+				</div>
+			
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h3>Just a bunch of books</h3>
+					<p>mostly sci-fi and fantasy</p>
+				</div>
+			
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h3>A lot more books</h3>
+					<p>cookbooks, self-help</p>
+				</div>
+			</div>	
+		</div>
+			
+		<div data-role="footer" data-position="fixed" data-id="page2">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#by_genre" >By Genre</a></li>
+					<li><a href="#by_author" >By Author</a></li>
+					<li><a href="#by_title" >By Title</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- Browse by Title Page -->
+	<div data-role="page" id="by_title" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>By Title</h1>
+		</div>		
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<ul data-role="listview" data-inset="true" data-filter="true">
+					<li data-role="list-divider">1st Set of Boxes</li>
+					<li>
+						<img src="images/diy_puppy.png" />
+						<h3>a stack of comic books</h3>
+						<p>some old ones but few worth anything</p>
+						<span class="ui-li-count">8</span>
+					</li>
+					<li data-role="list-divider">2nd Set of Boxes</li>
+					<li>
+						<h3>Just a bunch of books</h3>
+						<p>mostly sci-fi and fantasy</p>
+						<span class="ui-li-count">4</span>
+					</li>
+					<li data-role="list-divider">3rd Set of Boxes</li>
+					<li>
+						<h3>A lot more books</h3>
+						<p>cookbooks, self-help</p>
+						<span class="ui-li-count">5</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div data-role="collapsible-set">
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<h3>a stack of comic books</h3>
+				<p>some old ones but few worth anything</p>
+			</div>
+			
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<h3>Just a bunch of books</h3>
+				<p>mostly sci-fi and fantasy</p>
+			</div>
+			
+			<div data-role="collapsible" data-collapsed="true" data-theme="e">
+				<h3>A lot more books</h3>
+				<p>cookbooks, self-help</p>
+			</div>
+		</div>	
+		
+		<div data-role="footer" data-position="fixed" data-id="page2">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#by_genre" >By Genre</a></li>
+					<li><a href="#by_author" >By Author</a></li>
+					<li><a href="#by_title" >By Title</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- TEST PAGE 1 -->
+	<div data-role="page" id="test" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>*Browse by Genre*</h1>
+		</div>	
+			
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<ul data-role="listview" data-inset="true" data-filter="true">
+					<li data-role="list-divider">Non-Fiction</li>
+					<li>
+						<img src="images/Art & Photography.png" />
+						<h4>Art & Photography</h4>
+					</li>
+					<li>
+						<img src="images/Biographies & Memoirs.png" />
+						<h4>Biographies & Memoirs</h4>
+					</li>
+					<li>
+						<img src="images/Computers & Technology.png" />
+						<h4>Computers & Technology</h4>
+					</li>
+					<li>
+						<img src="images/Cookbooks, Food & Wine.png" />
+						<h4>Cookbooks, Food & Wine</h4>
+					</li>
+					<li>
+						<img src="images/Crafts, Hobbies & Home.png" />
+						<h4>Crafts, Hobbies & Home</h4>
+					</li>
+					<li>
+						<img src="images/Education & Reference.png" />
+						<h4>Education & Reference</h4>
+					</li>
+					<li>
+						<img src="images/Health, Fitness & Dieting.png" />
+						<h4>Health, Fitness & Dieting</h4>
+					</li>
+					<li>
+						<img src="images/History.png" />
+						<h4>History</h4>
+					</li>
+					<li>
+						<img src="images/Law.png" />
+						<h4>Law</h4>
+					</li>
+					<li>
+						<img src="images/Math & Science.png" />
+						<h4>Math & Science</h4>
+					</li>
+					<li>
+						<img src="images/Medical.png" />
+						<h4>Medical</h4>
+					</li>
+					<li>
+						<img src="images/Parenting & Relationships.png" />
+						<h4>Parenting & Relationships</h4>
+					</li>
+					<li>
+						<img src="images/Religion & Spirituality.png" />
+						<h4>Religion & Spirituality</h4>
+					</li>
+					<li>
+						<img src="images/Self Help.png" />
+						<h4>Self Help</h4>
+					</li>
+					<li>
+						<img src="images/Sports & Outdoors.png" />
+						<h4>Sports & Outdoors</h4>
+					</li>
+					<li>
+						<img src="images/Teens.png" />
+						<h4>Teens</h4>
+					</li>
+					<li>
+						<img src="images/Travel.png" />
+						<h4>Travel</h4>
+					</li>
+					<li data-role="list-divider">Fiction</li>
+					<li>
+						<img src="images/Children's Books.png" />
+						<h4>Children's Books</h4>
+					</li>
+					<li>
+						<img src="images/Biographies & Memoirs.png" />
+						<h4>Biographies & Memoirs</h4>
+					</li>
+					<li>
+						<img src="images/Horror.png" />
+						<h4>Horror</h4>
+					</li>
+					<li>
+						<img src="images/Humor.png" />
+						<h4>Humor</h4>
+					</li>
+					<li>
+						<img src="images/Law.png" />
+						<h4>Law</h4>
+					</li>
+					<li>
+						<img src="images/Manga & Graphic Novels.png" />
+						<h4>Manga & Graphic Novels</h4>
+					</li>
+					<li>
+						<img src="images/Mystery, Crime, Thriller & Suspense.png" />
+						<h4>Mystery, Crime, Thriller & Suspense</h4>
+					</li>
+					<li>
+						<img src="images/Romance.png" />
+						<h4>Romance</h4>
+					</li>
+					<li>
+						<img src="images/Sci Fi & Fantasy.png" />
+						<h4>Sci Fi & Fantasy</h4>
+					</li>
+					<li>
+						<img src="images/Western.png" />
+						<h4>Western</h4>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+		<div data-role="footer" data-position="fixed" data-id="page2">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#by_genre" >By Genre</a></li>
+					<li><a href="#by_author" >By Author</a></li>
+					<li><a href="#by_title" >By Title</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+<!-- Test Page 2 -->
 
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/test.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>

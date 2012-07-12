@@ -13,24 +13,24 @@ window.addEventListener("DOMContentLoaded", function() {
 		return ElementX;
 	}
     
+var genreTypes = [ "-- Choose a Genre or Subject --", "Art & Photography", "Biographies & Memoirs", "Children's Books", "Computers & Technology", "Cookbooks, Food & Wine", "Crafts, Hobbies & Home", "Education & Reference", "Health, Fitness & Dieting", "History", "Horror", "Humor", "Law","Literature & Fiction", "Manga & Graphic Novels", "Math & Science", "Medical", "Mystery, Crime, Thriller & Suspense", "Parenting & Relationships", "Religion & Spirituality", "Romance", "Sci Fi & Fantasy", "Self Help", "Sports & Outdoors", "Teens", "Travel", "Western"];
 
 	// Create the element for the select field and fill with options
 	function makeCats( ) {
-		console.log("Testing");
-		var genreTypes = [ "-- Choose a Genre or Subject --", "Art & Photography", "Biographies & Memoirs", "Children's Books", "Computers & Technology", "Cookbooks, Food & Wine", "Crafts, Hobbies & Home", "Education & Reference", "Health, Fitness & Dieting", "History", "Horror", "Humor", "Law","Literature & Fiction", "Manga & Graphic Novels", "Math & Science", "Medical", "Mystery, Crime, Thriller & Suspense", "Parenting & Relationships", "Religion & Spirituality", "Romance", "Sci Fi & Fantasy", "Self Help", "Sports & Outdoors", "Teens", "Travel", "Western"];
+		
 		var formTag = document.getElementsByTagName( "form" ),
 			selectLi = MiU( 'subject' ),
 			makeSelect = document.createElement( 'select' );
 			makeSelect.setAttribute( 'id', 'genre' );
 		for (var i=0, j=genreTypes.length; i<j; i++) {
-			console.log(genreTypes);
 			var makeOption = document.createElement( 'option' );
 			var optText = genreTypes[ i ];
+			console.log(optText);
 			makeOption.setAttribute( 'value', optText );
 			makeOption.innerHTML = optText;
 			makeSelect.appendChild(makeOption );
 		}
-		selectLi.appendChild( makeSelect );
+		selectLi.appendChild(makeSelect);
 	}
     
 
@@ -69,7 +69,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
     
-// Moved storeData here:
     	function storeData(key) {
 		// If there is no key, then this is a brand new item and needs a key.
 		if (!key) {
@@ -97,7 +96,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		alert ("Saved" );
 		}
 		
-// Moved validate here:
 	function validate( event ) {
 		// Define the elements we want to check
 		var getGenre = MiU( 'genre' );
@@ -153,11 +151,9 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 		
-// Moved editItem here:
 	function editItem( ) {
 		// take the item data from local storage
 		var value = localStorage.getItem( this.key );
-//		console.log(getItem(this.key);
 		var item = JSON.parse( value );
 		var save = MiU ( 'submit' );
         
@@ -192,7 +188,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		editSubmit.key = this.key;
     }
     
-// deleteItem moved here:
 	function deleteItem( ) {
 		var ask = confirm( "Are you sure you want to delete this book?" );
 		if (ask) {
@@ -231,14 +226,6 @@ window.addEventListener("DOMContentLoaded", function() {
 	}
 
     
-// storeData moved
-
-      
-// editItem moved
-  
-// deleteItem moved  
-
-// autoFillData moved here:
 	function autoFillData( ) {
 		// The actual JSON object data required for this to work is coming from the json.js which is loaded from the html page.
      	// Store the JSON data into local storage
@@ -248,7 +235,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 
-// getImage moved here:
+
 	// Get the image for the genre being displayed
 	function getImage( catName, makeSubList ) {
 		var imageLi = document.createElement( 'li' );
@@ -258,6 +245,9 @@ window.addEventListener("DOMContentLoaded", function() {
 		imageLi.appendChild(newImg);
 	}
 
+     // Variable defaults
+	makeCats( );
+	
 	function getData ( ) {
 		toggleControls( "on" );
 		if (localStorage.length === 0 ) {
@@ -292,13 +282,9 @@ window.addEventListener("DOMContentLoaded", function() {
 		makeItemLinks( localStorage.key(i), linksLi); // create the edit and delete buttons or links for each item in local storage.
 		}
 	}
-    
-// getImage moved
 
-    
-// autoFillData moved
 
-               
+           
     
 	function clearLocData( ) {
 		if (localStorage.length === 0) {
@@ -310,22 +296,16 @@ window.addEventListener("DOMContentLoaded", function() {
 			return false;
 		}
 	}
-    
-    
-// validate moved
+
     
 	function Back() {
 		console.log("move back one page");  
 		window.history.back();  // keeping this option as it might make sense later as I develop this app.
 	}
-
-    
-     // Variable defaults
-	makeCats( );
     
 	// Set Link and Submit Click Events
-	var displayLink = MiU ( 'displayLink' );
-	displayLink.addEventListener ( 'click', getData );
+	var displayLink = MiU('displayLink');
+	displayLink.addEventListener('click', getData);
     
 	var clearLink = MiU ( 'clearLink' );
 	clearLink.addEventListener ( 'click', clearLocData );
@@ -337,23 +317,25 @@ window.addEventListener("DOMContentLoaded", function() {
 	
 	var goBack = MiU ( 'back' );
 	back.addEventListener ( 'click', Back );  
-
-/*
+	
 	// dropdown for browsing by genre
-	var byGenre = MiU ( 'byGenre' );
-	byGenre.addEventListener ( 'click', makeCats());
-*/
+	var byGenre = MiU( 'subject' );
+	byGenre.addEventListener ( 'click', getSearch);
+	
+
+
 	 	// Search
 	var search = MiU('searchBtn');
+	search.addEventListener('click', getSearch);
 	
-	function getSearch( ) {
+	var getSearch = function( ) {
 		var category = MiU( 'genre' ).value;
 		var term = MiU( 'search').value;
 		
 		// By Genre Only
 		if ( category != "-- Choose a Genre or Subject --" && term === "") {
 			for ( i=0, j=localStorage.length; i<j; i++){
-			var key = localStorage.key(i);
+			var key = localStorage.key[i];
 			var value = localStorage.getItem[key];
 			var obj = JSON.parse(value);
 			if ( category === obj.group[1]) {
@@ -367,7 +349,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	// Search by Term Only
 	if (term !== "" && category === "-- Choose a Genre or Subject --") {
 		for (i=0, j=localStorage.length; i<j; i++) {
-			var key = localStorage.key(i);
+			var key = localStorage.key[i];
 			var value = localStorage.getItem[key];
 			var obj = JSON.parse(value);
 			for (n in obj) {
