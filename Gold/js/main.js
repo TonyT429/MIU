@@ -16,6 +16,7 @@ window.addEventListener("DOMContentLoaded", function() {
     	// Variable defaults
 	var genreTypes = [ "-- Choose a Genre or Subject --", "Art & Photography", "Biographies & Memoirs", "Children's Books", "Computers & Technology", "Cookbooks, Food & Wine", "Crafts, Hobbies & Home", "Education & Reference", "Health, Fitness & Dieting", "History", "Horror", "Humor", "Law","Literature & Fiction", "Manga & Graphic Novels", "Math & Science", "Medical", "Mystery, Crime, Thriller & Suspense", "Parenting & Relationships", "Religion & Spirituality", "Romance", "Sci Fi & Fantasy", "Self Help", "Sports & Outdoors", "Teens", "Travel", "Western"];
 	makeCats( );
+	grabJSON( );
 	var isaseries;
 	
 	// Create the element for the select field and fill with options
@@ -294,7 +295,17 @@ window.addEventListener("DOMContentLoaded", function() {
 			return false;
 		}
 	}
-    
+	
+	var grabJSON = function(json) {
+		for (var t=0; t<json.length; t++) {
+			var bookT = json.btitle[t];
+			console.log(bookT);
+			var bookA = json.author[t];
+			var bookG = json.genre[t];
+		}
+		return(bookT, bookA, bookG);
+	}
+	
     
 	function Back() {
 		console.log("move back one page");  
@@ -319,7 +330,9 @@ window.addEventListener("DOMContentLoaded", function() {
 	
 	var goBack = MiU ( 'back' );
 	back.addEventListener ( 'click', Back );  
-
+	
+	
+/*
 	function getSearch() {
         var term = MiU("search").value;
         var makeDiv2 = document.createElement("div");
@@ -359,6 +372,6 @@ window.addEventListener("DOMContentLoaded", function() {
 	// dropdown for browsing by title
 	var byTitle = MiU('byTitle');
 	byTitle.addEventListener('click', get_title);
-	
+*/	
 
 });
