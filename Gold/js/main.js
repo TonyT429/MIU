@@ -13,29 +13,30 @@ window.addEventListener("DOMContentLoaded", function() {
 		return ElementX;
 	}
     
-
+    	// Variable defaults
+	var genreTypes = [ "-- Choose a Genre or Subject --", "Art & Photography", "Biographies & Memoirs", "Children's Books", "Computers & Technology", "Cookbooks, Food & Wine", "Crafts, Hobbies & Home", "Education & Reference", "Health, Fitness & Dieting", "History", "Horror", "Humor", "Law","Literature & Fiction", "Manga & Graphic Novels", "Math & Science", "Medical", "Mystery, Crime, Thriller & Suspense", "Parenting & Relationships", "Religion & Spirituality", "Romance", "Sci Fi & Fantasy", "Self Help", "Sports & Outdoors", "Teens", "Travel", "Western"];
+	makeCats( );
+	var isaseries;
+	
 	// Create the element for the select field and fill with options
 	function makeCats( ) {
-		console.log("Testing");
-		var genreTypes = [ "-- Choose a Genre or Subject --", "Art & Photography", "Biographies & Memoirs", "Children's Books", "Computers & Technology", "Cookbooks, Food & Wine", "Crafts, Hobbies & Home", "Education & Reference", "Health, Fitness & Dieting", "History", "Horror", "Humor", "Law","Literature & Fiction", "Manga & Graphic Novels", "Math & Science", "Medical", "Mystery, Crime, Thriller & Suspense", "Parenting & Relationships", "Religion & Spirituality", "Romance", "Sci Fi & Fantasy", "Self Help", "Sports & Outdoors", "Teens", "Travel", "Western"];
 		var formTag = document.getElementsByTagName( "form" ),
 			selectLi = MiU( 'subject' ),
 			makeSelect = document.createElement( 'select' );
 			makeSelect.setAttribute( 'id', 'genre' );
 		for (var i=0, j=genreTypes.length; i<j; i++) {
-			console.log(genreTypes);
 			var makeOption = document.createElement( 'option' );
 			var optText = genreTypes[ i ];
+			console.log(optText);
 			makeOption.setAttribute( 'value', optText );
 			makeOption.innerHTML = optText;
 			makeSelect.appendChild(makeOption );
 		}
-		selectLi.appendChild( makeSelect );
+		selectLi.appendChild(makeSelect);
 	}
     
 
-	// Variable defaults
-	var isaseries;
+
    
 	// Get value of selected Radio Button
 	function getSelectedRadio( ) {
@@ -69,7 +70,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
     
-// Moved storeData here:
+
     	function storeData(key) {
 		// If there is no key, then this is a brand new item and needs a key.
 		if (!key) {
@@ -97,7 +98,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		alert ("Saved" );
 		}
 		
-// Moved validate here:
+
 	function validate( event ) {
 		// Define the elements we want to check
 		var getGenre = MiU( 'genre' );
@@ -153,11 +154,10 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 		
-// Moved editItem here:
+
 	function editItem( ) {
 		// take the item data from local storage
 		var value = localStorage.getItem( this.key );
-//		console.log(getItem(this.key);
 		var item = JSON.parse( value );
 		var save = MiU ( 'submit' );
         
@@ -192,7 +192,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		editSubmit.key = this.key;
     }
     
-// deleteItem moved here:
+    
 	function deleteItem( ) {
 		var ask = confirm( "Are you sure you want to delete this book?" );
 		if (ask) {
@@ -230,15 +230,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		linksLi.appendChild( deleteLink );
 	}
 
-    
-// storeData moved
-
-      
-// editItem moved
-  
-// deleteItem moved  
-
-// autoFillData moved here:
 	function autoFillData( ) {
 		// The actual JSON object data required for this to work is coming from the json.js which is loaded from the html page.
      	// Store the JSON data into local storage
@@ -248,7 +239,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 
-// getImage moved here:
 	// Get the image for the genre being displayed
 	function getImage( catName, makeSubList ) {
 		var imageLi = document.createElement( 'li' );
@@ -292,13 +282,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		makeItemLinks( localStorage.key(i), linksLi); // create the edit and delete buttons or links for each item in local storage.
 		}
 	}
-    
-// getImage moved
-
-    
-// autoFillData moved
-
-               
+                  
     
 	function clearLocData( ) {
 		if (localStorage.length === 0) {
@@ -312,8 +296,6 @@ window.addEventListener("DOMContentLoaded", function() {
 	}
     
     
-// validate moved
-    
 	function Back() {
 		console.log("move back one page");  
 		window.history.back();  // keeping this option as it might make sense later as I develop this app.
@@ -321,7 +303,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
     
      // Variable defaults
-	makeCats( );
+
     
 	// Set Link and Submit Click Events
 	var displayLink = MiU ( 'displayLink' );
@@ -338,64 +320,45 @@ window.addEventListener("DOMContentLoaded", function() {
 	var goBack = MiU ( 'back' );
 	back.addEventListener ( 'click', Back );  
 
-/*
-	// dropdown for browsing by genre
-	var byGenre = MiU ( 'byGenre' );
-	byGenre.addEventListener ( 'click', makeCats());
-*/
-	 	// Search
-	var search = MiU('searchBtn');
-	
-	function getSearch( ) {
-		var category = MiU( 'genre' ).value;
-		var term = MiU( 'search').value;
-		
-		// By Genre Only
-		if ( category != "-- Choose a Genre or Subject --" && term === "") {
-			for ( i=0, j=localStorage.length; i<j; i++){
-			var key = localStorage.key(i);
-			var value = localStorage.getItem[key];
-			var obj = JSON.parse(value);
-			if ( category === obj.group[1]) {
-				for (n in obj) {
-					console.log(obj[n][1]);
-				}
-			}
-		}
-	}
-	
-	// Search by Term Only
-	if (term !== "" && category === "-- Choose a Genre or Subject --") {
-		for (i=0, j=localStorage.length; i<j; i++) {
-			var key = localStorage.key(i);
-			var value = localStorage.getItem[key];
-			var obj = JSON.parse(value);
-			for (n in obj) {
-				if (term === obj[n][1]) {
-					for (q in obj) {
-						console.log(obj[q][1]);
-					}
-				}
-			}
-		}
-	}
-	
-	// Search by Both Category and Term
-	if (term !== "" && category != "-- Choose a Genre or Subject --") {
-		for (i=0, j=localStorage.length; i<j; i++) {
-			var key = localStorage.key[i];
-			var value = localStorage.getItem[key];
-			var obj = JSON.parse(value);
-			for (n in obj) {
-				if (term === obj[n][1] && category === obj.genre[1]) {
-					for (q in obj) {
-						console.log(obj[q][1]);
-					}
-				}
-			}
-		}
-	}
+	function getSearch() {
+        var term = MiU("search").value;
+        var makeDiv2 = document.createElement("div");
+        makeDiv2.setAttribute("id", "items");
+        var makeList2 = document.createElement("ul");
+        makeDiv2.appendChild(makeList2);
+        document.body.appendChild(makeDiv2);
+         MiU("items").style.display = "block";
 
-	search.addEventListener( "click", getSearch);
-	}
+
+	
+	// attempt at getting json via jquery
+	MiU.getJSON('js/json.js', function(json) {
+		alert('JSON Data: ' + json.author[3].name);
+	  	var items = [];
+	  	console.log(items);
+
+	  	MiU.each(data, function(key, val) {
+	    		items.push('<li id="' + key + '">' + val + '</li>');
+	    		console.log(data);
+	  	});
+
+  	MiU('<ul/>', {
+    		'class': 'my-new-list',
+    		html: items.join('')
+ 	 	}).appendTo('body');
+	});
+	
+	MiU.getJSON("test.js", { name: "John", time: "2pm" }, function(json) {
+    alert("JSON Data: " + json.users[3].name);
+    });
+	
+	// dropdown for browsing by author
+	var byAuthor = MiU('byAuthor');
+	byAuthor.addEventListener('click', get_author);
+	
+	// dropdown for browsing by title
+	var byTitle = MiU('byTitle');
+	byTitle.addEventListener('click', get_title);
+	
+
 });

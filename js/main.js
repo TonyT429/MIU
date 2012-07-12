@@ -16,14 +16,12 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	// Create the element for the select field and fill with options
 	function makeCats( ) {
-		console.log("Testing");
 		var genreTypes = [ "-- Choose a Genre or Subject --", "Art & Photography", "Biographies & Memoirs", "Children's Books", "Computers & Technology", "Cookbooks, Food & Wine", "Crafts, Hobbies & Home", "Education & Reference", "Health, Fitness & Dieting", "History", "Horror", "Humor", "Law","Literature & Fiction", "Manga & Graphic Novels", "Math & Science", "Medical", "Mystery, Crime, Thriller & Suspense", "Parenting & Relationships", "Religion & Spirituality", "Romance", "Sci Fi & Fantasy", "Self Help", "Sports & Outdoors", "Teens", "Travel", "Western"];
 		var formTag = document.getElementsByTagName( "form" ),
 			selectLi = MiU( 'subject' ),
 			makeSelect = document.createElement( 'select' );
 			makeSelect.setAttribute( 'id', 'genre' );
 		for (var i=0, j=genreTypes.length; i<j; i++) {
-			console.log(genreTypes);
 			var makeOption = document.createElement( 'option' );
 			var optText = genreTypes[ i ];
 			makeOption.setAttribute( 'value', optText );
@@ -342,7 +340,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	// dropdown for browsing by genre
 	var byGenre = MiU ( 'byGenre' );
 	byGenre.addEventListener ( 'click', makeCats());
-*/
+
 	 	// Search
 	var search = MiU('searchBtn');
 	
@@ -398,4 +396,5 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	search.addEventListener( "click", getSearch);
 	}
+*/
 });
