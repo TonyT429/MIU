@@ -1,46 +1,600 @@
-<!DOCTYPE html>
+<!doctype html>  
+<html lang="en">
+<head>
 
-<!--  MIU 1207           -->
-<!--  Project - revamped index  -->
-<!--  Anthony Torrez   -->
-
-<html>
+	<meta charset="utf-8"/>
 	
-    <head>
-    	<!-- set up meta tags (charset, description, keywords, robots,and viewport) -->
-    	<meta charset="utf-8" />
-    	<meta name="description" content="Books I Own - launch or index page." />
-    	<meta name="keywords" content="books, author, html5, mobile development, Full Sail University" />
-    	<meta name= "robots" content="index, follow" />
-    	<meta name= "viewport" content= "user-scalable=no, width=device-width" />
-    	<meta name= "viewport" content= "target-densitydpi=device-dpi" />
-    	<meta name="HandheldFriendly" content="True">
-    	<meta name="MobileOtimized" content="320" />
-    			
-    	<!-- Document Title -->
-    	<title> Bronze Index </title>
-    			
-    		<!-- Import our CSS Styles and JavaScript - future reference -->
-    		<link href="css/styles.css" rel="stylesheet" type="text/css" />
-    		<script src="js/main.js" type="text/javascript"> </script>
-    			
-	</head>
+	<title>Bronze Index</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on"/>
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	
+
+</head>
+<body>
+<!-- Home Page -->
+	<div data-role="page" id="home">
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Books I Own</h1>
+			<p><a href="#search" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e" value="Test" id="test" data-ajax="false">Search</a></p>
+		</div>
 		
-		<!-- Document Body -->
+		<div data-role="content">
+			<img src="images/bookstore.png"/>
+			<p><a href="additem.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">Add a Book Now</a></p>
+			<!--
+			<p><a href="#test2" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e" value="Test" id="test2" data-ajax="false">Go to Test Page 2</a></p>
+			-->
+			<p><a href="../Gold/index.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e" value="Test" id="test" data-ajax="false">Go to Bronze Page</a></p>	
+		</div>
 		
-	<body>
-		<header>
-			<h1> Books I Own </h1>
-			<input type="text" name="search" id="searchBtn" /><label for="search"> Search</label><br />
-			<img src="images/bookstore.png">
-		</header>
-		<br />
-		<a href="../Gold/index.html" title="Go2GoldApp"><input type="image" src="images/Go2GoldApp.png" name="go2goldapp" id="go2GoldApp" /><br />
-		<footer>
-			<input type="image" src="images/ByGenre.png" name= "genre" id="subject" /><br />
-			<a href="underConstruction.html" title="underConstruction"><input type="image" src="images/ByAuthor.png" name="byAuthor" id="byAuthor" /><br />
-			<a href="underConstruction.html" title="underConstruction"><input type="image" src="images/ByBook.png" name="byBookTitle" id="byBookTitle" /><br />
-			<a href="additem.html" title="addbook"><input type="image" src="images/AddaBook.png" name="addaBook" id="addaBook" /><br />
-		</footer>
-	</body>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#by_genre" >By Genre</a></li>
+					<li><a href="#by_author" >By Author</a></li>
+					<li><a href="#by_title" >By Title</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- Under Construction Page -->
+	<div data-role="page" id="underConst" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>Sorry!</h1>
+		</div>
+		<div data-role="content">
+			<img src="images/diy_puppy.png"/>
+			<p>Requested Page is Under Construction!</p>
+			<p>Free image courtesy of FreeDigitalPhotos.net</p>
+		<p>Image: <a href="http://www.freedigitalphotos.net" target="_blank">FreeDigitalPhotos.net</a></p>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="page2">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#by_genre" >By Genre</a></li>
+					<li><a href="#by_author" >By Author</a></li>
+					<li><a href="#by_title" >By Title</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- Browse by Genre Page -->
+	<div data-role="page" id="search" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>Search</h1>
+		</div>	
+			
+		<div class="ui-grid-b">
+			<div class="ui-block-a">
+				<ol >
+  					<img src="images/art & photography.png"/> Art & Photography<br/>
+  					<img src="images/Computers & Technology.png"/>Computers & Technology<br/>
+ 					<img src="images/Education & Reference.png"/>Education & Reference<br/>
+					<img src="images/Horror.png"/>Horror<br/>
+					<img src="images/Literature & Fiction.png"/>Literature & Fiction<br/>
+  					<img src="images/Medical.png"/>Medical<br/>
+  					<img src="images/Religion & Spirituality.png"/>Religion & Spirituality<br/>
+  					<img src="images/Self Help.png"/>Self Help<br/>
+  					<img src="images/Travel.png"/>Travel<br/>
+  				</ol>
+  			</div>
+			<div class="ui-block-b">
+				<ol>
+  					<img src="images/biographies & memoirs.png"/>Biographies & Memoirs<br/>
+  					<img src="images/Cookbooks, Food & Wine.png"/>Cookbooks, Food & Wine<br/>
+ 					<img src="images/Health, Fitness & Dieting.png"/>Health, Fitness & Dieting<br/>
+					<img src="images/Humor.png"/>Humor<br/>
+					<img src="images/Manga & Graphic Novels.png"/>Manga & Graphic Novels<br/>
+  					<img src="images/Mystery, Crime, Thriller & Suspense.png"/>Mystery, Crime, Thriller & Suspense<br/>
+  					<img src="images/Romance.png"/>Romance<br/>
+  					<img src="images/Sports & Outdoors.png"/>Sports & Outdoors<br/>
+  					<img src="images/Western.png"/>Western<br/>
+				</ol>
+			</div>
+			<div class="ui-block-c">
+				<ol>
+					<img src="images/children's books.png"/>Children's Books<br/>
+  					<img src="images/Crafts, Hobbies & Home.png"/>Crafts, Hobbies & Home<br/>
+ 					<img src="images/History.png"/>History<br/>
+					<img src="images/Law.png"/>Law<br/>
+					<img src="images/Math & Science.png"/>Math & Science<br/>
+  					<img src="images/Parenting & Relationships.png"/>Parenting & Relationships<br/>
+  					<img src="images/Sci Fi & Fantasy.png"/>Sci Fi & Fantasy<br//>
+  					<img src="images/Teens.png"/>Teens<br/>
+				</ol>
+			</div>
+		</div>
+			
+		<div data-role="footer" data-position="fixed" data-id="page2">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#by_genre" >By Genre</a></li>
+					<li><a href="#by_author" >By Author</a></li>
+					<li><a href="#by_title" >By Title</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- Browse by Author Page -->
+	<div data-role="page" id="by_author" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>By Author</h1>
+		</div>		
+		<div data-role="content">		
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>A - C</h4>
+					<p>Keri Arthur</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>D - F</h4>
+					<p>No Authors in this list</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>G - I</h4>
+					<p>Zane Grey</p>
+					<p>Dr. John Heinerman</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>J - L</h4>
+					<p>Robert T. Kiyosaki</p>
+					<p>Robert E. Kowalski</p>
+					<p>J. F. Lewis</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>M - O</h4>
+					<p>John C. Maxwell</p>
+					<p>Mike McGrath</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>P - R</h4>
+					<p>Shelley Powers</p>
+					<p>Dr. Stefan Ripich</p>
+					<p>Anthony Robbins</p>
+					<p>Ann Rolbin</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>S - U</h4>
+					<p>Gary Scheiner</p>
+					<p>Mark Schneider</p>
+					<p>Jennifer Tidwell</p>
+					<p>Edward Topol</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>V - Z</h4>
+					<p>Carrie Vaughn</p>
+					<p>Dr. Julian Whitaker</p>
+				</div>
+			</div>	
+		</div>
+			
+		<div data-role="footer" data-position="fixed" data-id="page2">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#by_genre" >By Genre</a></li>
+					<li><a href="#by_author" >By Author</a></li>
+					<li><a href="#by_title" >By Title</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- Browse by Title Page -->
+	<div data-role="page" id="by_title" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>By Title</h1>
+		</div>		
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>A - C</h4>
+					<p>Awaken The Giant Within: Anthony Robbins</p>
+					<p>Becoming a Person of Influence: John C. Maxwell</p>
+					<p></p>
+					<p>Burned: J.F. Lewis</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>D - F</h4>
+					<p>Dermo: Edward Topol</p>
+					<p>Designing Interfaces: Jenifer Tidwell</p>
+					<p>Easy Russian Phrasebook and Dictionary: Ann Rolbin</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>G - I</h4>
+					<p>Get Control of Your Blood Sugars: Gary Scheiner</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>J - L</h4>
+					<p>Javascript Cookbook: Shelley Powers</p>
+					<p>Javescript In Easy Steps: Mike McGrath</p>
+
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>M - O</h4>
+
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>P - R</h4>
+					<p>Rich Dad, Poor Dad: Robert T. Kiyosaki</p>
+	
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>S - U</h4>
+					<p>The 21 Irrefutable Laws of Leadership: John C. Maxwell</p>
+					<p>The 30 Day Diabetes Cure: Dr Stefan Ripich</p>
+					<p>The 8 Week Cholesterol Cure: Robert E. Kowalski</p>
+					<p>The Best of the Bottle: Mark Schneider</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>V - Z</h4>
+				</div>
+			</div>
+		</div>
+				
+		<div data-role="footer" data-position="fixed" data-id="page2">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#by_genre" >By Genre</a></li>
+					<li><a href="#by_author" >By Author</a></li>
+					<li><a href="#by_title" >By Title</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- Search -->
+	<div data-role="page" id="search" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>Search</h1>
+		</div>	
+			
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<ul data-role="listview" data-inset="true" data-theme="e" data-filter="true">
+					<li data-role="list-divider" data-theme="e">Non-Fiction</li>
+					<li>
+						<img src="images/Art & Photography.png" />
+						<h4>Art & Photography</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Biographies & Memoirs.png" />
+						<h4>Biographies & Memoirs</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Computers & Technology.png" />
+						<h4>Computers & Technology</h4>
+						<p> Book Title: Javascript Cookbook,  Author: Shelley Powers</p>
+						<p>Book Title: JavaScript in Easy Steps,  Author: Mike McGrath</p>
+						<p>Book Title: Designing Interfaces,  Author: Jenifer Tidwell</p>
+
+					</li>
+					<li>
+						<img src="images/Cookbooks, Food & Wine.png" />
+						<h4>Cookbooks, Food & Wine</h4>
+					</li>
+					<li>
+						<img src="images/Crafts, Hobbies & Home.png" />
+						<h4>Crafts, Hobbies & Home</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Education & Reference.png" />
+						<h4>Education & Reference</h4>
+						<p>Book Title: Rich Dad, Poor Dad,  Author: Robert T. Kiyosaki</p>
+						<p>Book Title: Dermo,  Author: Edward Topol</p>
+						<p>Book Title: The 21 irrefutable Laws of Leadership,  Author: John C. Maxwell</p>
+						<p>Book Title: Easy Russian Phrasebook & Dictionary,  Author: Ann Rolbin</p>
+
+
+					</li>
+					<li>
+						<img src="images/Health, Fitness & Dieting.png" />
+						<h4>Health, Fitness & Dieting</h4>
+					</li>
+					<li>
+						<img src="images/History.png" />
+						<h4>History</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Law.png" />
+						<h4>Law</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Math & Science.png" />
+						<h4>Math & Science</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Medical.png" />
+						<h4>Medical</h4>
+					</li>
+					<li>
+						<img src="images/Parenting & Relationships.png" />
+						<h4>Parenting & Relationships</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Religion & Spirituality.png" />
+						<h4>Religion & Spirituality</h4>
+					</li>
+					<li>
+						<img src="images/Self Help.png" />
+						<h4>Self Help</h4>
+					</li>
+					<li>
+						<img src="images/Sports & Outdoors.png" />
+						<h4>Sports & Outdoors</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Teens.png" />
+						<h4>Teens</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Travel.png" />
+						<h4>Travel</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li data-role="list-divider">Fiction</li>
+					<li>
+						<img src="images/Children's Books.png" />
+						<h4>Children's Books</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Biographies & Memoirs.png" />
+						<h4>Biographies & Memoirs</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Horror.png" />
+						<h4>Horror</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Humor.png" />
+						<h4>Humor</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Literature & Fiction.png" />
+						<h4>Literature & Fiction</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Manga & Graphic Novels.png" />
+						<h4>Manga & Graphic Novels</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Mystery, Crime, Thriller & Suspense.png" />
+						<h4>Mystery, Crime, Thriller & Suspense</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Romance.png" />
+						<h4>Romance</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Sci Fi & Fantasy.png" />
+						<h4>Sci Fi & Fantasy</h4>
+						<p>Book Title:Burned,  Author: J.F. Lewis</p>
+
+					</li>
+					<li>
+						<img src="images/Western.png" />
+						<h4>Western</h4>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+		<div data-role="footer" data-position="fixed" data-id="page2">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#by_genre" >By Genre</a></li>
+					<li><a href="#by_author" >By Author</a></li>
+					<li><a href="#by_title" >By Title</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+<!-- Test Page 2 -->
+	<div data-role="page" id="search" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>Search</h1>
+		</div>	
+			
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<ul data-role="listview" data-inset="true" data-theme="e" data-filter="true">
+					<li data-role="list-divider" data-theme="e">Non-Fiction</li>
+					<li>
+						<img src="images/Art & Photography.png" />
+						<h4>Art & Photography</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Biographies & Memoirs.png" />
+						<h4>Biographies & Memoirs</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Computers & Technology.png" />
+						<h4>Computers & Technology</h4>
+						<p> Book Title: Javascript Cookbook,  Author: Shelley Powers</p>
+						<p>Book Title: JavaScript in Easy Steps,  Author: Mike McGrath</p>
+						<p>Book Title: Designing Interfaces,  Author: Jenifer Tidwell</p>
+
+					</li>
+					<li>
+						<img src="images/Cookbooks, Food & Wine.png" />
+						<h4>Cookbooks, Food & Wine</h4>
+					</li>
+					<li>
+						<img src="images/Crafts, Hobbies & Home.png" />
+						<h4>Crafts, Hobbies & Home</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Education & Reference.png" />
+						<h4>Education & Reference</h4>
+						<p>Book Title: Rich Dad, Poor Dad,  Author: Robert T. Kiyosaki</p>
+						<p>Book Title: Dermo,  Author: Edward Topol</p>
+						<p>Book Title: The 21 irrefutable Laws of Leadership,  Author: John C. Maxwell</p>
+						<p>Book Title: Easy Russian Phrasebook & Dictionary,  Author: Ann Rolbin</p>
+
+
+					</li>
+					<li>
+						<img src="images/Health, Fitness & Dieting.png" />
+						<h4>Health, Fitness & Dieting</h4>
+					</li>
+					<li>
+						<img src="images/History.png" />
+						<h4>History</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Law.png" />
+						<h4>Law</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Math & Science.png" />
+						<h4>Math & Science</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Medical.png" />
+						<h4>Medical</h4>
+					</li>
+					<li>
+						<img src="images/Parenting & Relationships.png" />
+						<h4>Parenting & Relationships</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Religion & Spirituality.png" />
+						<h4>Religion & Spirituality</h4>
+					</li>
+					<li>
+						<img src="images/Self Help.png" />
+						<h4>Self Help</h4>
+					</li>
+					<li>
+						<img src="images/Sports & Outdoors.png" />
+						<h4>Sports & Outdoors</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Teens.png" />
+						<h4>Teens</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Travel.png" />
+						<h4>Travel</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li data-role="list-divider">Fiction</li>
+					<li>
+						<img src="images/Children's Books.png" />
+						<h4>Children's Books</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Biographies & Memoirs.png" />
+						<h4>Biographies & Memoirs</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Horror.png" />
+						<h4>Horror</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Humor.png" />
+						<h4>Humor</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Literature & Fiction.png" />
+						<h4>Literature & Fiction</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Manga & Graphic Novels.png" />
+						<h4>Manga & Graphic Novels</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Mystery, Crime, Thriller & Suspense.png" />
+						<h4>Mystery, Crime, Thriller & Suspense</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Romance.png" />
+						<h4>Romance</h4>
+						<p>Currently there are no books listed under this genre</p>
+					</li>
+					<li>
+						<img src="images/Sci Fi & Fantasy.png" />
+						<h4>Sci Fi & Fantasy</h4>
+						<p>Book Title:Burned,  Author: J.F. Lewis</p>
+
+					</li>
+					<li>
+						<img src="images/Western.png" />
+						<h4>Western</h4>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+		<div data-role="footer" data-position="fixed" data-id="page2">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#by_genre" >By Genre</a></li>
+					<li><a href="#by_author" >By Author</a></li>
+					<li><a href="#by_title" >By Title</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+<div class="ui-grid-b">
+	<div class="ui-block-a">Block A</div>
+	<div class="ui-block-b">Block B</div>
+	<div class="ui-block-c">Block C</div>
+</div><!-- /grid-b -->
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
 </html>
