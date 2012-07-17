@@ -56,8 +56,7 @@
 			if(url == null) return false;
 
 			// Create Google Feed API address
-			//var api = "http"+ s +"://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?&q=" + encodeURIComponent(url);
-			var api = "feed://www.bookbrowse.com/rss/book_news.rss" + encodeURIComponent(url);
+			var api = "http"+ s +"://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?&q=" + encodeURIComponent(url);
 			if (options.limit != null) api += "&num=" + options.limit;
 			if (options.key != null) api += "&key=" + options.key;
 			api += "&output=json_xml"
