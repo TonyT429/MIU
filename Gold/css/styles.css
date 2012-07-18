@@ -1,10 +1,19 @@
 /*
 Title:  style.css  
 Author:   Anthony Torrez
-Date:  June 21st 2012
-CSS styles for my VFW 1206 Project
+Date:  July 17, 2012
+CSS styles for my MIU 1207 Project
 */
 
+label.error {
+	display:block; 
+	margin:10px 0; 
+	color:red;
+}
+
+#rberrorslink {
+	display:none;
+}
 
 body {
 	background: tan;
