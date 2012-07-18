@@ -33,12 +33,12 @@
 		
 		<div data-role="content">
 			<img src="images/bookstore.png"/>
-			<p><a href="additem.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">Add a Book Now</a></p>
+			<p><a href="#recordbooks" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">Add a Book Now</a></p>
 			<p><a href="#newsfeed" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">Go to RSS Feed</a></p>
 			<p><a href="../Bronze/index.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e" value="Test" id="test" data-ajax="false">Go to Bronze Page</a></p>	
 		</div>
 		
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-id="home">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#by_genre" >By Genre</a></li>
@@ -49,6 +49,7 @@
 			</div>
 		</div>
 	</div>
+	
 <!-- Under Construction Page -->
 	<div data-role="page" id="underConst" data-add-back-btn="true">
 		<div data-role="header" data-position="fixed">
@@ -62,7 +63,7 @@
 		<p>Image: <a href="http://www.freedigitalphotos.net" target="_blank">FreeDigitalPhotos.net</a></p>
 		</div>
 		
-		<div data-role="footer" data-position="fixed" data-id="page2">
+		<div data-role="footer" data-position="fixed" data-id="underConst">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#by_genre" >By Genre</a></li>
@@ -72,6 +73,7 @@
 			</div>
 		</div>
 	</div>
+	
 <!-- Browse by Genre Page -->
 	<div data-role="page" id="by_genre" data-add-back-btn="true">
 		<div data-role="header" data-position="fixed">
@@ -204,7 +206,7 @@
 			</div>
 		</div>
 			
-		<div data-role="footer" data-position="fixed" data-id="page2">
+		<div data-role="footer" data-position="fixed" data-id="by_genre">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#by_genre" >By Genre</a></li>
@@ -214,6 +216,7 @@
 			</div>
 		</div>
 	</div>
+	
 <!-- Browse by Author Page -->
 	<div data-role="page" id="by_author" data-add-back-btn="true">
 		<div data-role="header" data-position="fixed">
@@ -267,7 +270,7 @@
 			</div>	
 		</div>
 			
-		<div data-role="footer" data-position="fixed" data-id="page2">
+		<div data-role="footer" data-position="fixed" data-id="by_author">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#by_genre" >By Genre</a></li>
@@ -277,6 +280,7 @@
 			</div>
 		</div>
 	</div>
+	
 <!-- Browse by Title Page -->
 	<div data-role="page" id="by_title" data-add-back-btn="true">
 		<div data-role="header" data-position="fixed">
@@ -329,7 +333,7 @@
 			</div>
 		</div>
 				
-		<div data-role="footer" data-position="fixed" data-id="page2">
+		<div data-role="footer" data-position="fixed" data-id="by_title">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#by_genre" >By Genre</a></li>
@@ -339,6 +343,7 @@
 			</div>
 		</div>
 	</div>
+	
 <!-- Search -->
 	<div data-role="page" id="search" data-add-back-btn="true">
 		<div data-role="header" data-position="fixed">
@@ -492,7 +497,7 @@
 			</div>
 		</div>
 	
-		<div data-role="footer" data-position="fixed" data-id="page2">
+		<div data-role="footer" data-position="fixed" data-id="search">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#by_genre" >By Genre</a></li>
@@ -501,7 +506,8 @@
 				</ul>
 			</div>
 		</div>
-	</div>	
+	</div>
+		
 <!-- RSSFeed -->
 	<div data-role="page" id="newsfeed" data-add-back-btn="true">
 		<div data-role="header" data-theme="e">
@@ -512,7 +518,7 @@
 			<div id="rssfeed"></div>
 		</div>
 
-		<div data-role="footer" data-position="fixed" data-id="page2">
+		<div data-role="footer" data-position="fixed" data-id="newsfeed">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#by_genre" >By Genre</a></li>
@@ -523,14 +529,154 @@
 		</div>
 	</div>
 
+<!-- RecordBooksForm -->
+	<div data-role="page" id="recordbooks" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Record Books</h1>
+			<!-- Search field -->
+			<div data-role="fieldcontain">
+				<label for="booksearch">Search:</label>
+				<input type="search" name="booksearch" id="booksearch" />
+			</div>
+		</div>
+		
+		<div data-role="content">
+			<form action="" method="post" id="recordbooksform" >
+	<!-- Input Title -->
+				<div data-role="fieldcontain">
+					<label for="booktitle">Book Title:</label>
+					<input type="text" name="booktitle" id="booktitle" class="required" />
+				</div>
+	<!-- Input Author-->
+				<div data-role="fieldcontain">
+					<label for="bookauthor">Book Author:</label>
+					<input type="text" name="bookauthor" id="bookauthor" class="required" />
+				</div>
+	<!-- Input ISBN -->
+				<div data-role="fieldcontain">
+					<label for="bookISBN">ISBN:</label>
+					<input type="text" name="bookISBN" id="bookISBN" class="digits" />
+				</div>
+
+	<!-- Select Option -->
+				<div data-role="fieldcontain">
+					<label for"bookgenre">Genre</label>
+					<select name="bookgenre" id="bookgenre" data-native-menu="false">
+						<option data-placeholder="true">Select A Genre</option>
+						<optgroup label="Fiction">
+							<option value="art_photo">Art & Photography</option>
+							<option value="child_book">Children's Books</option>
+							<option value="compu_tech">Computers & Technology</option>
+							<option value="food_wine">Cookbooks, Food & Wine</option>
+							<option value="craft_home">Crafts, Hobbies & Home</option>
+							<option value="edu_ref">Education & Reference</option>
+							<option value="health">Health, Fitness & Dieting</option>
+							<option value="history">History</option>
+							<option value="horror">Horror</option>
+							<option value="humor">Humor</option>
+							<option value="law">Law</option>
+							<option value="manga">Manga & Graphic Novels</option>
+							<option value="math_sci">Math & Science</option>
+							<option value="medical">Medical</option>
+							<option value="crime_thrill">Mystery, Thriller & Suspense</option>
+							<option value="parent_rel">Parenting & Relationships</option>
+							<option value="relig_spirit">Religion & Spirituality</option>
+							<option value="romance">Romance</option>
+							<option value="sci_fan">Sci Fi & Fantasy</option>
+							<option value="self_help">Self Help</option>
+							<option value="sports_out">Sports & Outdoors</option>
+							<option value="teens">Teens</option>
+							<option value="travel">Travel</option>
+							<option value="west">Western</option>
+						</optgroup>
+						<optgroup label="Non-Fiction">
+							<option value="food_wine">Cookbooks, Food & Wine</option>
+							<option value="craft_home">Crafts, Hobbies & Home</option>
+							<option value="edu_ref">Education & Reference</option>
+						</optgroup>
+					</select>
+				</div>
+	<!-- Yes/No toggle slider -->
+				<div data-role="fieldcontain">
+					<label for="bookseries">Part of a Series:</label>
+					<select data-role="slider">
+						<option value="off">No</option>
+						<option value="on">Yes</option>
+					</select>
+				</div>
+
+	<!-- Input BookSeries-->
+				<div data-role="fieldcontain">
+					<label for="bookseries">Book Series:</label>
+					<input type="text" name="bookseries" id="bookseries" class="required" />
+				</div>
+
+	<!-- Rate book range slider -->
+				<div data-role="fieldcontain">
+					<label for="bookrate">Rate This Book:</label>
+					<input type="range" name="bookrate" id="bookrate" value="0" min="0" max="10" />
+				</div>
+
+	<!-- Input Review -->
+				<div data-role="fieldcontain">
+					<label for="bookreview">Reader Comments:</label>
+					<textarea></textarea>
+				</div>
+
+	<!-- Reset and Submit buttons -->
+				<div data-role="fieldcontain">
+					<input type="reset" value="Reset" data-theme="a"/>
+					<input type="submit" value="Submit" data-theme="b"/>
+				</div>
+				<a href="#recordbookserrors" id="rberrorslink" data-rel="dialog" data-transistion="pop">Open Errors</a>
+			</form>
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-id="recordbooks">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#favorite" data-icon="star">Favorites</a></li>
+					<li><a href="#change" data-icon="gear">Change</a></li>
+					<li><a href="#search" data-icon="search" class="ui-btn-active">Search</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+<!-- RecordBooksErrors -->
+	<div data-role="dialog" id="recordbookserrors" >
+		<div data-role="header" data-position="fixed">
+			<h1>Fields Missing</h1>
+		</div>
+		
+		<div data-role="content">
+			<ul>
+				<li>Test</li>
+			</ul>
+		</div>
+	</div>
+
+<!-- RecordBooksErrors -->
+	<div data-role="dialog" id="recordbookserrors" >
+		<div data-role="header" data-position="fixed">
+			<h1>Fields Missing</h1>
+		</div>
+		
+		<div data-role="content">
+			<ul>
+				<li>Test</li>
+			</ul>
+		</div>
+	</div>
 
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-	<script src="./js/RssFeed.js"></script>
-	<script src="./js/RssFeeder.js"></script>
+	<script type="text/javascript" src="js/libs/RssFeed.js"></script>
+	<script type="text/javascript" src="js/libs/RssFeeder.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/json.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-
+	
 </body>
 </html>
