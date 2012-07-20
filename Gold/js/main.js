@@ -54,8 +54,9 @@ $(document).bind('pageinit', function(){
 			var v5 = values[4];
 			var v6 = values[5];
 			var v7 = values[6];
+			var v8 = values[7];
 			
-			bookShelf += '<li>Book Title:'+v1+' Author: '+v2+' ? '+v3+' ? '+v4+' ? '+v5+' ? '+v6+' ? '+v7;
+			bookShelf += '<li>Book Title:'+v1+' Author: '+v2+' ? '+v3+' ? '+v4+' ? '+v5+' ? '+v6+' ? '+v7+' ? '+v8;
 		}   
 		
 		// if there are no items in storage
@@ -65,6 +66,8 @@ $(document).bind('pageinit', function(){
 		$("theLibrary").html(bookShelf);
 		}
 	}
+	
+	
 	getLib();
 });
 

@@ -552,12 +552,12 @@
 			<form action="" method="post" id="recordbooksform" >
 	<!-- Input Title -->
 				<div data-role="fieldcontain">
-					<label for="btitle">Book Title:</label>
+					<label for="btitle">Title:</label>
 					<input type="text" data-mini="true" name="btitle" id="btitle" class="required" />
 				</div>
 	<!-- Input Author-->
 				<div data-role="fieldcontain">
-					<label for="author">Book Author:</label>
+					<label for="author">Author:</label>
 					<input type="text" data-mini="true" name="author" id="author" class="required" />
 				</div>
 	<!-- Input ISBN -->
@@ -614,7 +614,7 @@
 
 	<!-- Input BookSeries-->
 				<div data-role="fieldcontain">
-					<label for="seriesname">Book Series:</label>
+					<label for="seriesname">Series Name:</label>
 					<input type="text" data-mini="true" name="seriesname" id="seriesname"  />
 				</div>
 
@@ -627,9 +627,14 @@
 	<!-- Input Review -->
 				<div data-role="fieldcontain" class="required">
 					<label for="bookreview">Reader Comments:</label>
-					<textarea></textarea>
+					<textarea class="required"></textarea>
 				</div>
-
+		
+	<!-- Date -->
+				<div data-role="fieldcontain" class="required date">
+					<label for="mydate">Some Date</label>
+					<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode":"datebox", "useImmediate":true, "useButton": false, "useFocus": true, "useInlineBlind": true}'>				
+				</div>
 	<!-- Reset and Submit buttons -->
 				<div data-role="fieldcontain">
 					<input type="reset" data-mini="true" value="Reset" data-theme="a"/>
