@@ -1,6 +1,7 @@
-// MIU 1207
-// Project
+// MIU 1207 Week 3
 // Anthony Torrez
+
+// Javascript file
 
 // Wait until the DOM is ready.
 window.addEventListener("DOMContentLoaded", function() {
@@ -96,6 +97,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 		
 
+/*
 	function validate( event ) {
 		// Define the elements we want to check
 		var getGenre = MiU( 'genre' );
@@ -150,7 +152,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			storeData( this.key );
 		}
 	}
-		
+*/		
 
 	function editItem( ) {
 		// take the item data from local storage
@@ -228,6 +230,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		linksLi.appendChild( deleteLink );
 	}
 
+/*
 	function autoFillData( ) {
 		// The actual JSON object data required for this to work is coming from the json.js which is loaded from the html page.
      	// Store the JSON data into local storage
@@ -236,7 +239,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			localStorage.setItem(id, JSON.stringify(json[n]));
 		}
 	}
-
+*/
 
 	// Get the image for the genre being displayed
 	function getImage( catName, makeSubList ) {
@@ -293,10 +296,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 
-	function Back() {
-		console.log("move back one page");  
-		window.history.back();  // keeping this option as it might make sense later as I develop this app.
-	}
 
      // Variable defaults
 	makeCats( );
@@ -313,7 +312,9 @@ window.addEventListener("DOMContentLoaded", function() {
 	var editSubmit = MiU( 'submit' );
 	editSubmit.addEventListener( "click", validate );
 	
-	var goBack = MiU ( 'back' );
-	back.addEventListener ( 'click', Back );  
 
 });
+
+
+
+
