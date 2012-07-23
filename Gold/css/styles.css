@@ -41,7 +41,8 @@ fieldset {
 p {
 	margin: 20 px;
 	font-style: italic;
-	font-size: 20px;
+	color: grey;
+	font-size: 12px;
 	text-align: align left;
 	text-indent: 20 px;
 	font: verdana, tehoma, geneva ;

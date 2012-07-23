@@ -66,9 +66,15 @@ $(document).bind('pageinit', function(){
 		$("theLibrary").html(bookShelf);
 		}
 	}
-	
+		
+		
 	
 	getLib();
+	
+	//reset type=date inputs to text
+	$( document ).bind( "mobileinit", function(){
+    		$.mobile.page.prototype.options.degradeInputs.date = true;
+  	});	
 });
 
 
