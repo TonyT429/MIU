@@ -1,5 +1,8 @@
 <!doctype html>  
 <html lang="en">
+	<div id="cta">
+		<img src="/bookstoreCTA3.png" alt="">
+	</div>
 <head>
 
 	<meta charset="utf-8"/>
@@ -15,8 +18,9 @@
 	<meta http-equiv="cleartype" content="on"/>
 	
 	<!-- StyleSheets under here -->
+	<!-- <link rel="stylesheet" href="jquery.ui.datepicker.mobile.css" /> -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-	<link rel="stylesheet" href="css/styles.css"/>
+	<link rel="stylesheet" href="css/styles.css" />
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
@@ -26,25 +30,23 @@
 <body>
 <!-- Home Page -->
 	<div data-role="page" id="home">
-		<div data-role="header" data-position="fixed" data-theme="e">
-			<h1>Books I Own</h1>
-			<p><a href="#search" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a" value="Test" id="test" data-ajax="false">Search</a></p>
+		<div data-role="header" data-theme="e" data-position="fixed" >
+			<img src="images/BookTrackerLogo.png" alt="Logo" height="60" width="160" />
 		</div>
 		
 		<div data-role="content">
-			<img src="images/bookstore.png" />
-			<p><a href="#recordbooks" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">Add a Book Now</a></p>
-			<p><a href="#newsfeed" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">Go to RSS Feed</a></p>
-			<p><a href="../Bronze/index.html" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="e" value="Test" id="test" data-ajax="false">Go to Bronze Page</a></p>	
+			<img src="images/CTAImage.png" alt="Logo" height="200" width="290" />
+			<p><a href="#recordbooks" data-theme="e" data-role="button" data-mini="true" data-theme="a" data-icon="arrow-r" data-iconpos="right" data-ajax="false">Add a Book Now</a></p>
+			<p></p>
+			<p><a href="../Bronze/index.html" data-theme="e" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right"  value="Test" id="test" data-ajax="false">Go to Bronze Page</a></p>	
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-id="home">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#by_genre" >By Genre</a></li>
-					<li><a href="#by_author" >By Author</a></li>
-					<li><a href="#by_title" >By Title</a></li>
-					
+					<li><a href="#search" data-role="button" data-theme="e" data-mini="true" data-iconpos="right"  value="search" id="search" data-ajax="false">Search</a></li>
+					<li><a href="#browse" data-role="button" data-theme="e" data-mini="true" data-iconpos="right"  value="browse" id="browse" data-ajax="false">Browse</a></li>
+					<li><a href="#newsfeed" data-role="button" data-theme="e" data-mini="true" data-iconpos="right"  data-ajax="false">RSS Feed</a></li>
 				</ul>
 			</div>
 		</div>
@@ -63,12 +65,12 @@
 		<p>Image: <a href="http://www.freedigitalphotos.net" target="_blank">FreeDigitalPhotos.net</a></p>
 		</div>
 		
-		<div data-role="footer" data-position="fixed" data-id="underConst">
+		<div data-role="footer" data-position="fixed" data-id="home">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#by_genre" >By Genre</a></li>
-					<li><a href="#by_author" >By Author</a></li>
-					<li><a href="#by_title" >By Title</a></li>
+					<li><a href="#search" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="search" id="search" data-ajax="false">Search</a></li>
+					<li><a href="#browse" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="browse" id="browse" data-ajax="false">Browse</a></li>
+					<li><a href="#newsfeed" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" data-ajax="false">RSS Feed</a></li>
 				</ul>
 			</div>
 		</div>
@@ -76,8 +78,9 @@
 	
 <!-- Browse by Genre Page -->
 	<div data-role="page" id="by_genre" data-add-back-btn="true">
-		<div data-role="header" data-theme="a" data-position="fixed">
+		<div data-role="header" data-theme="e" data-position="fixed">
 			<h1>By Genre</h1>
+			<a href="#browse" id="browse" data-inline="true" data-role="button" data-mini="true" data-icon="arrow-l" data-iconpos="right" data-theme="a" data-ajax="false">Back</a>
 		</div>	
 			
 		<div data-role="collapsible-set">
@@ -206,12 +209,12 @@
 			</div>
 		</div>
 			
-		<div data-role="footer" data-position="fixed" data-id="by_genre">
+		<div data-role="footer" data-position="fixed" data-id="home">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#by_genre" >By Genre</a></li>
-					<li><a href="#by_author" >By Author</a></li>
-					<li><a href="#by_title" >By Title</a></li>
+					<li><a href="#search" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="search" id="search" data-ajax="false">Search</a></li>
+					<li><a href="#browse" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="browse" id="browse" data-ajax="false">Browse</a></li>
+					<li><a href="#newsfeed" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" data-ajax="false">RSS Feed</a></li>
 				</ul>
 			</div>
 		</div>
@@ -219,9 +222,11 @@
 	
 <!-- Browse by Author Page -->
 	<div data-role="page" id="by_author" data-add-back-btn="true">
-		<div data-role="header" data-position="fixed">
+		<div data-role="header" data-theme="e" data-position="fixed">
 			<h1>By Author</h1>
+			<a href="#browse" id="browse" data-inline="true" data-role="button" data-mini="true" data-icon="arrow-l" data-iconpos="right" data-theme="a" data-ajax="false">Back</a>
 		</div>		
+		
 		<div data-role="content">		
 			<div data-role="collapsible-set">
 				<div data-role="collapsible" data-collapsed="true" data-theme="e">
@@ -270,12 +275,12 @@
 			</div>	
 		</div>
 			
-		<div data-role="footer" data-position="fixed" data-id="by_author">
+		<div data-role="footer" data-position="fixed" data-id="home">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#by_genre" >By Genre</a></li>
-					<li><a href="#by_author" >By Author</a></li>
-					<li><a href="#by_title" >By Title</a></li>
+					<li><a href="#search" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="search" id="search" data-ajax="false">Search</a></li>
+					<li><a href="#browse" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="browse" id="browse" data-ajax="false">Browse</a></li>
+					<li><a href="#newsfeed" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" data-ajax="false">RSS Feed</a></li>
 				</ul>
 			</div>
 		</div>
@@ -283,9 +288,11 @@
 	
 <!-- Browse by Title Page -->
 	<div data-role="page" id="by_title" data-add-back-btn="true">
-		<div data-role="header" data-position="fixed">
+		<div data-role="header" data-theme="e" data-position="fixed">
 			<h1>By Title</h1>
+			<a href="#browse" id="browse" data-inline="true" data-role="button" data-mini="true" data-icon="arrow-l" data-iconpos="right" data-theme="a" data-ajax="false">Back</a>
 		</div>		
+		
 		<div data-role="content">
 			<div data-role="collapsible-set">
 				<div data-role="collapsible" data-collapsed="true" data-theme="e">
@@ -333,12 +340,12 @@
 			</div>
 		</div>
 				
-		<div data-role="footer" data-position="fixed" data-id="by_title">
+		<div data-role="footer" data-position="fixed" data-id="home">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#by_genre" >By Genre</a></li>
-					<li><a href="#by_author" >By Author</a></li>
-					<li><a href="#by_title" >By Title</a></li>
+					<li><a href="#search" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="search" id="search" data-ajax="false">Search</a></li>
+					<li><a href="#browse" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="browse" id="browse" data-ajax="false">Browse</a></li>
+					<li><a href="#newsfeed" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" data-ajax="false">RSS Feed</a></li>
 				</ul>
 			</div>
 		</div>
@@ -346,7 +353,7 @@
 	
 <!-- Search -->
 	<div data-role="page" id="search" data-add-back-btn="true">
-		<div data-role="header" data-position="fixed">
+		<div data-role="header" data-theme="e" data-position="fixed">
 			<h1>Search</h1>
 			<a href="#home" id="home" data-inline="true" data-role="button" data-mini="true" data-icon="arrow-l" data-iconpos="right" data-theme="a" data-ajax="false">Home</a>
 		</div>	
@@ -498,12 +505,12 @@
 			</div>
 		</div>
 	
-		<div data-role="footer" data-position="fixed" data-id="search">
+		<div data-role="footer" data-position="fixed" data-id="home">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#by_genre" >By Genre</a></li>
-					<li><a href="#by_author" >By Author</a></li>
-					<li><a href="#by_title" >By Title</a></li>
+					<li><a href="#search" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="search" id="search" data-ajax="false">Search</a></li>
+					<li><a href="#browse" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="browse" id="browse" data-ajax="false">Browse</a></li>
+					<li><a href="#newsfeed" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" data-ajax="false">RSS Feed</a></li>
 				</ul>
 			</div>
 		</div>
@@ -520,12 +527,38 @@
 			<div id="rssfeed"></div>
 		</div>
 
-		<div data-role="footer" data-position="fixed" data-id="newsfeed">
+		<div data-role="footer" data-position="fixed" data-id="home">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#by_genre" >By Genre</a></li>
-					<li><a href="#by_author" >By Author</a></li>
-					<li><a href="#by_title" >By Title</a></li>
+					<li><a href="#search" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="search" id="search" data-ajax="false">Search</a></li>
+					<li><a href="#browse" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="browse" id="browse" data-ajax="false">Browse</a></li>
+					<li><a href="#newsfeed" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" data-ajax="false">RSS Feed</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+<!-- Browse -->
+	<div data-role="page" id="browse" data-add-back-btn="true">
+		<div data-role="header" data-theme="e" data-position="fixed">
+			<h1>Browse</h1>
+			<a href="#home" id="home" data-inline="true" data-role="button" data-mini="true" data-icon="arrow-l" data-iconpos="right" data-theme="a" data-ajax="false">Home</a>
+		</div>
+		
+		<div data-role="content">
+			<div data-role="fieldcontain">
+				<br />
+				<p><a href="#by_genre" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">By Genre</a></p>
+				<p><a href="#by_author" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">By Author</a></p>
+				<p><a href="#by_title" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">By Title</a></p>
+			</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#search" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="search" id="search" data-ajax="false">Search</a></li>
+					<li><a href="#browse" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="browse" id="browse" data-ajax="false">Browse</a></li>
+					<li><a href="#newsfeed" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" data-ajax="false">RSS Feed</a></li>
 				</ul>
 			</div>
 		</div>
@@ -546,6 +579,8 @@
 				<div class="ui-grid-b">
 					<a href="#" id="clearLink" data-inline="true"  data-role="button" data-mini="true" data-icon="alert" "data-iconpos="right" data-theme="a" data-ajax="false">Clear</a>
 				</div>
+			</div>
+		</div>
 			<!-- Search field -->
 			<!--
 			<div data-role="fieldcontain">
@@ -553,7 +588,7 @@
 				<input type="search" name="booksearch" id="booksearch" />
 			</div>
 			-->
-		</div>
+		
 		
 		<div data-role="content">
 			<form action="" method="post" id="recordbooksform" >
@@ -630,7 +665,7 @@
 	<!-- Rate book range slider -->
 				<div>
 					<label for="bookrate">Rate This Book:</label>
-					<input type="range" data-mini="true" name="bookrate" id="bookrate" value="0" min="0" max="10" />
+					<input type="range" data-mini="true" name="bookrate" id="bookrate" value="5" min="0" max="10" />
 					<br/><p>On a Scale of 1 to 10, did you like the book?</p>
 				</div>
 
@@ -656,17 +691,17 @@
 						<input type="reset" data-inline="true" data-mini="true" value="Reset" data-theme="a"/>
 					</div>
 				</div>
-					<a href="#recordbookserrors" id="rberrorslink" data-rel="dialog" data-transistion="pop">Open Errors</a>
+					<a href="#recordbookserrors" id="rberrorslink" data-rel="dialog">Open Errors</a>  <!-- removed the data-transistion="pop" -->
 				</form>
 			</div>
 		</div>
 
-		<div data-role="footer" data-position="fixed" data-id="newsfeed">
+		<div data-role="footer" data-position="fixed" data-id="home">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#by_genre" >By Genre</a></li>
-					<li><a href="#by_author" >By Author</a></li>
-					<li><a href="#by_title" >By Title</a></li>
+					<li><a href="#search" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="search" id="search" data-ajax="false">Search</a></li>
+					<li><a href="#browse" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="browse" id="browse" data-ajax="false">Browse</a></li>
+					<li><a href="#newsfeed" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" data-ajax="false">RSS Feed</a></li>
 				</ul>
 			</div>
 		</div>
@@ -700,13 +735,27 @@
     			</ul>
     		</div>
     		<button type="button" id="clearLog">Clear Log</button>
+    		
+		<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#search" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="search" id="search" data-ajax="false">Search</a></li>
+					<li><a href="#browse" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="browse" id="browse" data-ajax="false">Browse</a></li>
+					<li><a href="#newsfeed" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" data-ajax="false">RSS Feed</a></li>
+				</ul>
+			</div>
+		</div>
 
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-	<link rel="stylesheet" href="jquery.ui.datepicker.mobile.css" /> 
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+	<!--
   	<script src="jQuery.ui.datepicker.js"></script>
   	<script src="jquery.ui.datepicker.mobile.js"></script>
+  	-->
 	<script type="text/javascript" src="js/libs/RssFeed.js"></script>
 	<script type="text/javascript" src="js/libs/RssFeeder.js"></script>
 	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
@@ -717,3 +766,18 @@
 	
 </body>
 </html>
+
+<!--
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" /> 
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+<script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+
+<!-- Optional Mousewheel support: http://brandonaaron.net/code/mousewheel/docs -->
+<script type="text/javascript" src="PATH/TO/YOUR/COPY/OF/jquery.mousewheel.min.js"></script>
+
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+-->
