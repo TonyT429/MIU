@@ -4,7 +4,24 @@ Author:   Anthony Torrez
 Date:  July 17, 2012
 CSS styles for my MIU 1207 Project
 */
-
+ 
+#cta {
+	position:fixed; 
+	top:-50%; 
+	left:-50%; 
+	width:200%; 
+	height:200%;
+}
+#cta img {
+	position:absolute; 
+	top:0; 
+	left:0; 
+	right:0; 
+	bottom:0; 
+	margin:auto; 
+	min-width:50%;
+	min-height:50%;
+}
 label.error {
 	display:block; 
 	margin:10px 0; 
@@ -31,6 +48,10 @@ h1 {
 	outline-color: yellow;
 	font-style: oblique;
 */
+}
+
+img {
+	
 }
 
 fieldset {

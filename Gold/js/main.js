@@ -38,6 +38,11 @@ $(document).bind('pageinit', function(){
 		}
 	});
 	
+	$('#additem').submit(function(){
+		var newDate = new Date();
+		var item
+	}
+	
 	function getLib() {
 		var bookShelf = "";  
 		var b = 0;
