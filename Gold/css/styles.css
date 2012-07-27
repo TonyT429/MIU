@@ -5,23 +5,10 @@ Date:  July 17, 2012
 CSS styles for my MIU 1207 Project
 */
  
-#cta {
-	position:fixed; 
-	top:-50%; 
-	left:-50%; 
-	width:200%; 
-	height:200%;
+html {
+	background-image: url(images/WoodBackground.png);
 }
-#cta img {
-	position:absolute; 
-	top:0; 
-	left:0; 
-	right:0; 
-	bottom:0; 
-	margin:auto; 
-	min-width:50%;
-	min-height:50%;
-}
+
 label.error {
 	display:block; 
 	margin:10px 0; 
@@ -35,6 +22,25 @@ label.error {
 body {
 	background: tan;
 	overflow: scroll;
+}
+
+#cta {
+	position:fixed; 
+	top:-50%; 
+	left:-50%; 
+	width:200%; 
+	height:200%;
+}
+
+#cta img {
+	position:absolute; 
+	top:0; 
+	left:0; 
+	right:0; 
+	bottom:0; 
+	margin:auto; 
+	min-width:50%;
+	min-height:50%;
 }
 /*
 h1 {
@@ -70,8 +76,8 @@ p {
 }
 
 a {
-	color: blue;
-	font-size: large;
+	color: yellow;
+	font-size: 1 em;
 	font-style: italic;
 }
 a:active {
@@ -80,11 +86,6 @@ a:active {
 	font-style: italic;
 }
 
-legend {
-	font-style: oblique;
-	font-size: large;
-	color: blue;
-}
 
 li {
 	color: purple;
@@ -95,5 +96,6 @@ input {
 }
 
 label {
-	position: center;
+	position: right;
+	text-align: right;
 }

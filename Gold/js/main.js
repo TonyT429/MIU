@@ -22,7 +22,7 @@ $(document).bind('pageinit', function(){
 			var html = '';
 			//console.log(validator.submitted);
 			for(var key in validator.submitted){
-				var label = $('label[for^="'+ key +'"]').not('[generated]');  // error with a label except those generated.
+				var label = $('label[for^="'+ key +'"]').not('[generated]');    // error with a label except those generated.
 				//console.log(label.text());
 				var legend = label.closest('fieldset').find('.ui-controlgroup-label');  
 				var fieldName = legend.length ? legend.text() : label.text();
@@ -38,12 +38,8 @@ $(document).bind('pageinit', function(){
 		}
 	});
 	
-	$('#additem').submit(function(){
-		var newDate = new Date();
-		var item
-	}
 	
-	function getLib() {
+	 function getLib() {
 		var bookShelf = "";  
 		var b = 0;
 		// get the number of items in storage starting at 0
@@ -76,10 +72,7 @@ $(document).bind('pageinit', function(){
 	
 	getLib();
 	
-	//reset type=date inputs to text
-	$( document ).bind( "mobileinit", function(){
-    		$.mobile.page.prototype.options.degradeInputs.date = true;
-  	});	
+
 });
 
 

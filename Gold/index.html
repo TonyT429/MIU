@@ -1,8 +1,5 @@
 <!doctype html>  
 <html lang="en">
-	<div id="cta">
-		<img src="/bookstoreCTA3.png" alt="">
-	</div>
 <head>
 
 	<meta charset="utf-8"/>
@@ -18,9 +15,13 @@
 	<meta http-equiv="cleartype" content="on"/>
 	
 	<!-- StyleSheets under here -->
-	<!-- <link rel="stylesheet" href="jquery.ui.datepicker.mobile.css" /> -->
+	<!--
+	<link rel="stylesheet" href="jquery.ui.datepicker.mobile.css" />
+	-->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
 	<link rel="stylesheet" href="css/styles.css" />
+	
+
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
@@ -30,15 +31,20 @@
 <body>
 <!-- Home Page -->
 	<div data-role="page" id="home">
-		<div data-role="header" data-theme="e" data-position="fixed" >
-			<img src="images/BookTrackerLogo.png" alt="Logo" height="60" width="160" />
+		<div data-role="header" data-theme="a" data-position="fixed" >
+			<div>
+				<a>
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>	
+				<label data-inline="true">Home</label>		
+			</div>
 		</div>
-		
-		<div data-role="content">
+			
+		<div data-role="content" style=”background-image:url(images/WoodBackground.png)”>
 			<img src="images/CTAImage.png" alt="Logo" height="200" width="290" />
-			<p><a href="#recordbooks" data-theme="e" data-role="button" data-mini="true" data-theme="a" data-icon="arrow-r" data-iconpos="right" data-ajax="false">Add a Book Now</a></p>
+			<p><a href="#recordbooks" data-role="button" data-theme="e" data-mini="true" data-theme="a" data-icon="arrow-r" data-iconpos="right" data-ajax="false">Add a Book Now</a></p>
 			<p></p>
-			<p><a href="../Bronze/index.html" data-theme="e" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right"  value="Test" id="test" data-ajax="false">Go to Bronze Page</a></p>	
+			<p><a href="../Bronze/index.html" data-role="button" data-theme="e" data-mini="true" data-icon="arrow-r" data-iconpos="right"  value="Test" id="test" data-ajax="false">Go to Bronze Page</a></p>	
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-id="home">
@@ -54,15 +60,20 @@
 	
 <!-- Under Construction Page -->
 	<div data-role="page" id="underConst" data-add-back-btn="true">
-		<div data-role="header" data-theme="e" data-position="fixed">
-			<h1>Sorry!</h1>
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>
+				<label data-inline="true">Sorry!</label>	
+			</div>
 		</div>
 		
 		<div data-role="content">
 			<img src="images/diy_puppy.png"/>
 			<p>Requested Page is Under Construction!</p>
 			<p>Free image courtesy of FreeDigitalPhotos.net</p>
-		<p>Image: <a href="http://www.freedigitalphotos.net" target="_blank">FreeDigitalPhotos.net</a></p>
+			<p>Image: <a href="http://www.freedigitalphotos.net" target="_blank">FreeDigitalPhotos.net</a></p>
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-id="home">
@@ -78,134 +89,138 @@
 	
 <!-- Browse by Genre Page -->
 	<div data-role="page" id="by_genre" data-add-back-btn="true">
-		<div data-role="header" data-theme="e" data-position="fixed">
-			<h1>By Genre</h1>
-			<a href="#browse" id="browse" data-inline="true" data-role="button" data-mini="true" data-icon="arrow-l" data-iconpos="right" data-theme="a" data-ajax="false">Back</a>
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>	
+				<label data-inline="true">By Genre</label>
+			</div>
 		</div>	
 			
-		<div data-role="collapsible-set">
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-			
-			
-				<img src="images/Art & Photography.png" />
-				<h4>Art & Photography</h4>
+		<div data-role="content" style=”background-image: url(images/WoodBackground.png)”>
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Art & Photography.png" />
+					<h4>Art & Photography</h4>
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<h4>Biographies & Memoirs</h4>
+					<img src="images/Biographies & Memoirs.png" />
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Children's Books.png" />
+					<h4>Children"s Books</h4>
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Computers & Technology.png" />
+					<h4>Computers & Technology</h4>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Cookbooks, Food & Wine.png" />
+					<h4>Cookbooks, Food & Wine</h4>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Crafts, Hobbies & Home.png" />
+					<h4>Crafts, Hobbies & Home</h4>
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Education & Reference.png" />
+					<h4>Education & Reference</h4> 
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Health, Fitness & Dieting.png" />
+					<h4>Health, Fitness & Dieting</h4>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/History.png" />
+					<h4>History</h4>
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Horror.png" />
+					<h4>Horror</h4>
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Humor.png" />
+					<h4>Humor</h4>
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Law.png" />
+					<h4>Law</h4>
 				<p>You have no books of this genre at the moment</p>
 			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<h4>Biographies & Memoirs</h4>
-				<img src="images/Biographies & Memoirs.png" />
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Children's Books.png" />
-				<h4>Children"s Books</h4>
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Computers & Technology.png" />
-				<h4>Computers & Technology</h4>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Cookbooks, Food & Wine.png" />
-				<h4>Cookbooks, Food & Wine</h4>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Crafts, Hobbies & Home.png" />
-				<h4>Crafts, Hobbies & Home</h4>
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Education & Reference.png" />
-				<h4>Education & Reference</h4> 
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Health, Fitness & Dieting.png" />
-				<h4>Health, Fitness & Dieting</h4>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/History.png" />
-				<h4>History</h4>
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Horror.png" />
-				<h4>Horror</h4>
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Humor.png" />
-				<h4>Humor</h4>
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Law.png" />
-				<h4>Law</h4>
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Literature & Fiction.png" />
-				<h4>Literature & Fiction</h4>
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Manga & Graphic Novels.png" />
-				<h4>Manga & Graphic Novels</h4> 
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Math & Science.png" />
-				<h4>Math & Science</h4>
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Medical.png" />
-				<h4>Medical</h4>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Mystery, Crime, Thriller & Suspense.png" />
-				<h4>Mystery, Crime, Thriller & Suspense</h4>
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Parenting & Relationships.png" />
-				<h4>Parenting & Relationships</h4>
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Religion & Spirituality.png" />
-				<h4>Religion & Spirituality</h4>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Romance.png" />
-				<h4>Romance</h4> 
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Sci Fi & Fantasy.png" />
-				<h4>Sci Fi & Fantasy</h4>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Self Help.png" />
-				<h4>Self Help</h4>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Sports & Outdoors.png" />
-				<h4>Sports & Outdoors</h4>
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Teens.png" />
-				<h4>Teens</h4>
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Travel.png" />
-				<h4>Travel</h4>
-				<p>You have no books of this genre at the moment</p>
-			</div>
-			<div data-role="collapsible" data-collapsed="true" data-theme="e">
-				<img src="images/Western.png" />
-				<h4>Western</h4>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Literature & Fiction.png" />
+					<h4>Literature & Fiction</h4>
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Manga & Graphic Novels.png" />
+					<h4>Manga & Graphic Novels</h4> 
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Math & Science.png" />
+					<h4>Math & Science</h4>
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Medical.png" />
+					<h4>Medical</h4>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Mystery, Crime, Thriller & Suspense.png" />
+					<h4>Mystery, Crime, Thriller & Suspense</h4>
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Parenting & Relationships.png" />
+					<h4>Parenting & Relationships</h4>
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Religion & Spirituality.png" />
+					<h4>Religion & Spirituality</h4>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Romance.png" />
+					<h4>Romance</h4> 
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Sci Fi & Fantasy.png" />
+					<h4>Sci Fi & Fantasy</h4>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Self Help.png" />
+					<h4>Self Help</h4>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Sports & Outdoors.png" />
+					<h4>Sports & Outdoors</h4>
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Teens.png" />
+					<h4>Teens</h4>
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Travel.png" />
+					<h4>Travel</h4>
+					<p>You have no books of this genre at the moment</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="e">
+					<img src="images/Western.png" />
+					<h4>Western</h4>
+				</div>
 			</div>
 		</div>
 			
@@ -222,12 +237,16 @@
 	
 <!-- Browse by Author Page -->
 	<div data-role="page" id="by_author" data-add-back-btn="true">
-		<div data-role="header" data-theme="e" data-position="fixed">
-			<h1>By Author</h1>
-			<a href="#browse" id="browse" data-inline="true" data-role="button" data-mini="true" data-icon="arrow-l" data-iconpos="right" data-theme="a" data-ajax="false">Back</a>
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>
+				<label data-inline="true">By Author</label>	
+			</div>
 		</div>		
 		
-		<div data-role="content">		
+		<div data-role="content" style=”background-image: url(images/WoodBackground.png)”>		
 			<div data-role="collapsible-set">
 				<div data-role="collapsible" data-collapsed="true" data-theme="e">
 					<h4>A - C</h4>
@@ -288,12 +307,17 @@
 	
 <!-- Browse by Title Page -->
 	<div data-role="page" id="by_title" data-add-back-btn="true">
-		<div data-role="header" data-theme="e" data-position="fixed">
-			<h1>By Title</h1>
-			<a href="#browse" id="browse" data-inline="true" data-role="button" data-mini="true" data-icon="arrow-l" data-iconpos="right" data-theme="a" data-ajax="false">Back</a>
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>
+				<label data-inline="true">By Title</label>	
+			</div>
+
 		</div>		
 		
-		<div data-role="content">
+		<div data-role="content" style=”background-image: url(images/WoodBackground.png)”>
 			<div data-role="collapsible-set">
 				<div data-role="collapsible" data-collapsed="true" data-theme="e">
 					<h4>A - C</h4>
@@ -353,12 +377,16 @@
 	
 <!-- Search -->
 	<div data-role="page" id="search" data-add-back-btn="true">
-		<div data-role="header" data-theme="e" data-position="fixed">
-			<h1>Search</h1>
-			<a href="#home" id="home" data-inline="true" data-role="button" data-mini="true" data-icon="arrow-l" data-iconpos="right" data-theme="a" data-ajax="false">Home</a>
-		</div>	
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>
+				<label data-inline="true">Search</label>		
+			</div>
+		</div>
 			
-		<div data-role="content">
+		<div data-role="content" style=”background-image: url(images/WoodBackground.png)”>
 			<div data-role="collapsible-set">
 				<ul data-role="listview" data-inset="true" data-theme="e" data-filter="true">
 					<li data-role="list-divider" data-theme="e">Non-Fiction</li>
@@ -518,9 +546,14 @@
 		
 <!-- RSSFeed -->
 	<div data-role="page" id="newsfeed" data-add-back-btn="true">
-		<div data-role="header" data-theme="e">
-			<h1>RSS Feed</h1>
-			<a href="#home" id="home" data-inline="true" data-role="button" data-mini="true" data-icon="arrow-l" data-iconpos="right" data-theme="a" data-ajax="false">Home</a>
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>	
+				<label data-inline="true">RSS Feed</label>
+			</div>
+
 		</div>
 
 		<div data-role="content">
@@ -538,37 +571,15 @@
 		</div>
 	</div>
 	
-<!-- Browse -->
-	<div data-role="page" id="browse" data-add-back-btn="true">
-		<div data-role="header" data-theme="e" data-position="fixed">
-			<h1>Browse</h1>
-			<a href="#home" id="home" data-inline="true" data-role="button" data-mini="true" data-icon="arrow-l" data-iconpos="right" data-theme="a" data-ajax="false">Home</a>
-		</div>
-		
-		<div data-role="content">
-			<div data-role="fieldcontain">
-				<br />
-				<p><a href="#by_genre" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">By Genre</a></p>
-				<p><a href="#by_author" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">By Author</a></p>
-				<p><a href="#by_title" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">By Title</a></p>
-			</div>
-		
-		<div data-role="footer" data-position="fixed" data-id="home">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#search" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="search" id="search" data-ajax="false">Search</a></li>
-					<li><a href="#browse" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="browse" id="browse" data-ajax="false">Browse</a></li>
-					<li><a href="#newsfeed" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" data-ajax="false">RSS Feed</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
 <!-- RecordBooksForm -->
 	<div data-role="page" id="recordbooks" data-add-back-btn="true">
-		<div data-role="header" data-position="fixed" data-theme="e">
-			<h1>Record Books</h1>
-			<a href="#home" id="home" data-inline="true" data-role="button" data-mini="true" data-icon="home" data-iconpos="right" data-theme="e" data-ajax="false">Home</a>
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>	
+				<label>Record Books</label>
+			</div>
 		</div>
 		
 		<div data-role="content">	
@@ -580,17 +591,6 @@
 					<a href="#" id="clearLink" data-inline="true"  data-role="button" data-mini="true" data-icon="alert" "data-iconpos="right" data-theme="a" data-ajax="false">Clear</a>
 				</div>
 			</div>
-		</div>
-			<!-- Search field -->
-			<!--
-			<div data-role="fieldcontain">
-				<label for="booksearch">Search:</label>
-				<input type="search" name="booksearch" id="booksearch" />
-			</div>
-			-->
-		
-		
-		<div data-role="content">
 			<form action="" method="post" id="recordbooksform" >
 	<!-- Input Title -->
 				<div>
@@ -607,7 +607,6 @@
 					<label for="isbn">ISBN:</label>
 					<input type="text" Placeholder="Please Enter the 10 or 13 digit ISBN - digits only"data-mini="true" name="isbn" id="isbn" class="digits" />
 				</div>
-
 	<!-- Select Genre Option -->
 				<div data-role="fieldcontain">
 					<label for"genre">Genre</label>
@@ -655,45 +654,38 @@
 						<p>  Please select either No or Yes"</p>
 					</fieldset>
 				</div>
-
 	<!-- Input BookSeries-->
 				<div>
 					<label for="seriesname">Series Name:</label>
 					<input type="text" placeholder="Please enter Series name if applicable" data-mini="true" name="seriesname" id="seriesname"  />
 				</div>
-
 	<!-- Rate book range slider -->
 				<div>
 					<label for="bookrate">Rate This Book:</label>
 					<input type="range" data-mini="true" name="bookrate" id="bookrate" value="5" min="0" max="10" />
 					<br/><p>On a Scale of 1 to 10, did you like the book?</p>
 				</div>
-
 	<!-- Input Review -->
 				<div class="required">
 					<label for="bookreview">Reader Comments:</label>
-					<textarea class="required" placeholder="Please enter your opinion of this book"></textarea>
-				</div><br/>
-		
+					<textarea class="required" placeholder="Please enter your opinion of this book" id="bookreview" ></textarea>
+				</div><br/>		
 	<!-- Date -->
 				<div class="required date">
-					
 					<label for="date">Date:</label>
 					<input type="date" name="date" id="date" data-mini="false" data-mini="true" value="mm/dd/yyyy" class="required" />
 				</div>
-
 	<!-- Reset and Submit buttons -->
-					<div class="ui-grid-a">
+				<div class="ui-grid-a">
 					<div class="ui-block-a">
 						<input type="submit"  data-inline="true" data-mini="true" value="Submit" data-theme="e"/>
 					</div>
-					<div class="ui-grid-b">
+					<div class="ui-block-b">
 						<input type="reset" data-inline="true" data-mini="true" value="Reset" data-theme="a"/>
 					</div>
 				</div>
-					<a href="#recordbookserrors" id="rberrorslink" data-rel="dialog">Open Errors</a>  <!-- removed the data-transistion="pop" -->
-				</form>
-			</div>
+				<a href="#recordbookserrors" id="rberrorslink" data-rel="dialog">Open Errors</a>  <!-- removed data-transistion="pop" --> 
+			</form>
 		</div>
 
 		<div data-role="footer" data-position="fixed" data-id="home">
@@ -706,9 +698,11 @@
 			</div>
 		</div>
 	</div>
+
+
+
 	
 <!-- RecordBooksErrors -->
-<!--
 	<div data-role="dialog" id="recordbookserrors" >
 		<div data-role="header" data-position="fixed">
 			<h1>Fields Missing</h1>
@@ -720,9 +714,241 @@
 			</ul>
 		</div>
 	</div>
--->
+	
+	
+<!-- Browse -->
+	<div data-role="page" id="browse" data-add-back-btn="true">
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>	
+				<label data-inline="true">Browse</label>
+			</div>
+		</div>
+		
+		<div data-role="content" style=”background-image: url("images/WoodBackground.png")”>
+			<div data-role="fieldcontain">
+				<a href="#by_genre" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">By Genre</a>
+				<a href="#by_author" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">By Author</a>
+				<a href="#by_title" data-role="button" data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="e" data-ajax="false">By Title</a>
+			</div>	
+		</div>	
+		
+		<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#search" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="search" id="search" data-ajax="false">Search</a></li>
+					<li><a href="#browse" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" value="browse" id="browse" data-ajax="false">Browse</a></li>
+					<li><a href="#newsfeed" data-role="button" data-mini="true" data-iconpos="right" data-theme="e" data-ajax="false">RSS Feed</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
 
 <!-- The Library -->
+	<div data-role="page" id="myLibrary" data-add-back-btn="true">
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>
+				<label data-inline="true">My Library</label>	
+			</div>
+		</div>
+		
+		<div data-role="content">
+ 			<ul id="theLibrary">
+        			<li>Loading&hellip;</li>
+    			</ul>
+    		</div>
+    		<button type="button" id="clearLog">Clear Log</button>
+
+	<div data-role="dialog" id="recordbookserrors" >
+		<div data-role="header" data-position="fixed">
+			<h1>Fields Missing</h1>
+		</div>
+		
+		<div data-role="content">
+			<ul>
+				<li>Test</li>
+			</ul>
+		</div>
+	</div>
+	
+
+
+
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+	<!--
+  	<script src="jQuery.ui.datepicker.js"></script>
+  	<script src="jquery.ui.datepicker.mobile.js"></script>
+  	-->
+	<script type="text/javascript" src="js/libs/RssFeed.js"></script>
+	<script type="text/javascript" src="js/libs/RssFeeder.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/mainJS.js"></script>
+	<script type="text/javascript" src="js/main-jic.js"></script>
+	
+	
+</body>
+</html>
+
+<!--
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" /> 
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+<script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+
+<!-- Optional Mousewheel support: http://brandonaaron.net/code/mousewheel/docs -->
+<script type="text/javascript" src="PATH/TO/YOUR/COPY/OF/jquery.mousewheel.min.js"></script>
+
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+-->
+<!--
+<!-- RecordBooksForm -->
+	<div data-role="page" id="recordbooks" data-add-back-btn="true">
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>			
+			</div>
+			<h1>Record Books</h1>
+		</div>
+		
+		<div data-role="content">	
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="#theLibrary" id="getLib" data-inline="true" data-role="button" data-mini="true" data-icon="info" data-iconpos="right" data-theme="d" data-ajax="false">Display</a>
+				</div>
+				<div class="ui-grid-b">
+					<a href="#" id="clearLink" data-inline="true"  data-role="button" data-mini="true" data-icon="alert" "data-iconpos="right" data-theme="a" data-ajax="false">Clear</a>
+				</div>
+			</div>
+			<form action="" method="post" id="recordbooksform" >
+	<!-- Input Title -->
+				<div>
+					<label for="btitle">Book Title:</label>
+					<input type="text" placeholder="Please Enter the Book Title" data-mini="true" name="btitle" id="btitle" class="required" />
+				</div>
+	<!-- Input Author-->
+				<div>
+					<label for="author">Author's Name:</label>
+					<input type="text" placeholder="Please Enter the Author's name"data-mini="true" name="author" id="author" class="required" />
+				</div>
+	<!-- Input ISBN -->
+				<div>
+					<label for="isbn">ISBN:</label>
+					<input type="text" Placeholder="Please Enter the 10 or 13 digit ISBN - digits only"data-mini="true" name="isbn" id="isbn" class="digits" />
+				</div>
+	<!-- Select Genre Option -->
+				<div data-role="fieldcontain">
+					<label for"genre">Genre</label>
+					<select name="genre" id="genre" data-mini="true" data-theme="e" data-native-menu="false" class="required">
+						<option data-placeholder="true">Select A Genre</option>
+						<option data-placeholder="true">Select A Genre </option>
+						<optgroup label="Fiction">
+							<option value="child_book" >Children's Books</option>
+							<option value="horror" bnv >Horror</option>
+							<option value="humor">Humor</option>
+							<option value="manga">Manga & Graphic Novels</option>
+							<option value="romance">Romance</option>
+							<option value="sci_fan">Sci Fi & Fantasy</option>
+							<option value="west">Western</option>
+						</optgroup>
+						<optgroup label="Non-Fiction">
+							<option value="art_photo">Art & Photography</option>
+							<option value="compu_tech">Computers & Technology</option>
+							<option value="food_wine">Cookbooks, Food & Wine</option>
+							<option value="craft_home">Crafts, Hobbies & Home</option>
+							<option value="edu_ref">Education & Reference</option>
+							<option value="health">Health, Fitness & Dieting</option>
+							<option value="history">History</option>
+							<option value="law">Law</option>
+							<option value="math_sci">Math & Science</option>
+							<option value="medical">Medical</option>
+							<option value="crime_thrill">Mystery, Thriller & Suspense</option>
+							<option value="parent_rel">Parenting & Relationships</option>
+							<option value="relig_spirit">Religion & Spirituality</option>
+							<option value="self_help">Self Help</option>
+							<option value="sports_out">Sports & Outdoors</option>
+							<option value="teens">Teens</option>
+							<option value="travel">Travel</option>
+						</optgroup>
+					</select>
+				</div>
+	<!-- Radio buttons -->
+				<div>
+					<fieldset data-role=controlgroup data-type="horizontal" data-theme="e" data-mini="true" class="required" >
+						<legend>Part of a Series:</legend>
+						<input type="radio" value="no" name="issaseries" id="issaseries-1" checked="checked" class="required"/>
+						<label for="issaseries-1">No</label>
+						<input type="radio" value="yes" name="issaseries" id="issaseries-2" />
+						<label for="issaseries-2">Yes</label>
+						<p>  Please select either No or Yes"</p>
+					</fieldset>
+				</div>
+	<!-- Input BookSeries-->
+				<div>
+					<label for="seriesname">Series Name:</label>
+					<input type="text" placeholder="Please enter Series name if applicable" data-mini="true" name="seriesname" id="seriesname"  />
+				</div>
+	<!-- Rate book range slider -->
+				<div>
+					<label for="bookrate">Rate This Book:</label>
+					<input type="range" data-mini="true" name="bookrate" id="bookrate" value="5" min="0" max="10" />
+					<br/><p>On a Scale of 1 to 10, did you like the book?</p>
+				</div>
+	<!-- Input Review -->
+				<div class="required">
+					<label for="bookreview">Reader Comments:</label>
+					<textarea class="required" placeholder="Please enter your opinion of this book"></textarea>
+				</div><br/>		
+	<!-- Date -->
+				<div class="required date">
+					<label for="date">Date:</label>
+					<input type="date" name="date" id="date" data-mini="false" data-mini="true" value="mm/dd/yyyy" class="required" />
+				</div>
+	<!-- Reset and Submit buttons -->
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<input type="submit"  data-inline="true" data-mini="true" value="Submit" data-theme="e"/>
+					</div>
+					<div class="ui-block-b">
+						<input type="reset" data-inline="true" data-mini="true" value="Reset" data-theme="a"/>
+					</div>
+				</div>
+					<a href="#recordbookserrors" id="rberrorslink" data-rel="dialog">Open Errors</a>  <!-- removed data-transistion="pop" --> 
+				</form>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-id="newsfeed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#by_genre" >By Genre</a></li>
+					<li><a href="#by_author" >By Author</a></li>
+					<li><a href="#by_title" >By Title</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+-->
+<!-- The Library -->
+<!--
 	<div data-role="page" id="myLibrary" data-add-back-btn="true">
 		<div data-role="header" data-position="fixed" data-theme="e">
 			<h1>My Library</h1>
@@ -745,39 +971,5 @@
 				</ul>
 			</div>
 		</div>
-
-	<!-- JavaScript under here -->
-	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
-	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
-	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
-	<!--
-  	<script src="jQuery.ui.datepicker.js"></script>
-  	<script src="jquery.ui.datepicker.mobile.js"></script>
-  	-->
-	<script type="text/javascript" src="js/libs/RssFeed.js"></script>
-	<script type="text/javascript" src="js/libs/RssFeeder.js"></script>
-	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="js/json.js"></script>
-	<script type="text/javascript" src="js/mainJS.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	
-	
-</body>
-</html>
-
-<!--
-<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
-<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" /> 
-
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
-<script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
-
-<!-- Optional Mousewheel support: http://brandonaaron.net/code/mousewheel/docs -->
-<script type="text/javascript" src="PATH/TO/YOUR/COPY/OF/jquery.mousewheel.min.js"></script>
-
-<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
-<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
-<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+	</div>
 -->

@@ -18,7 +18,7 @@
 
 	<meta charset="utf-8">
 	
-	<title>Gold Index</title>
+	<title>Bronze Index</title>
 	
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="HandheldFriendly" content="True">
@@ -37,16 +37,20 @@
 	
 
 </head>
-<body>
+<br />ody>
 <!-- Home Page -->
 	<div data-role="page" id="home">
-		<div data-role="header" data-position="fixed" data-theme="b">
-			<h1>Books I Own</h1>
-			<p><a href="#search" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b" value="Test" id="test" data-ajax="false">Search</a></p>
+		<div data-role="header" data-theme="a" data-position="fixed" >
+			<div>
+				<a>
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>	
+				<label data-inline="true">Home</label>		
+			</div>
 		</div>
 		
-		<div data-role="content">
-			<img src="images/bookstore.png">
+		<div data-role="content" style=”background-image: url(images/WoodBackground.png)”>
+			<img src="images/CTAImage.png"/>
 			<p><a href="additem.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b" data-ajax="false">Add a Book Now</a></p>
 			<p><a href="../Gold/index.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b" value="Test" id="test" data-ajax="false">Go to Gold Page</a></p>	
 		</div>
@@ -54,6 +58,7 @@
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
+					<li><a href="#search" data-mini="true"  value="search" id="search" data-ajax="false">Search</a></li>
 					<li><a href="#by_genre" >By Genre</a></li>
 					<li><a href="#by_author" >By Author</a></li>
 					<li><a href="#by_title" >By Title</a></li>
@@ -65,19 +70,26 @@
 	
 <!-- Under Construction Page -->
 	<div data-role="page" id="underConst" data-add-back-btn="true">
-		<div data-role="header" data-position="fixed">
-			<h1>Sorry!</h1>
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>
+				<label data-inline="true">Sorry!</label>	
+			</div>
 		</div>
-		<div data-role="content">
-			<img src="images/diy_puppy.png">
+		
+		<div data-role="content" style=”background-image: url(images/WoodBackground.png)”>
+			<img src="images/diy_puppy.png"/>
 			<p>Requested Page is Under Construction!</p>
 			<p>Free image courtesy of FreeDigitalPhotos.net</p>
-		<p>Image: <a href="http://www.freedigitalphotos.net" target="_blank">FreeDigitalPhotos.net</a></p>
+			<p>Image: <a href="http://www.freedigitalphotos.net" target="_blank">FreeDigitalPhotos.net</a></p>
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-id="page2">
 			<div data-role="navbar">
 				<ul>
+					<li><a href="#search" data-mini="true"  value="search" id="search" data-ajax="false">Search</a></li>
 					<li><a href="#by_genre" >By Genre</a></li>
 					<li><a href="#by_author" >By Author</a></li>
 					<li><a href="#by_title" >By Title</a></li>
@@ -87,10 +99,16 @@
 	</div>
 	
 <!-- Browse by Genre Page -->
-	<div data-role="page" id="by_genre" data-add-back-btn="true">
-		<div data-role="header" data-position="fixed">
-			<h1>By Genre</h1>
-		</div>	
+	<div data-role="page" id="by_genre">
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>
+				<label data-inline="true">By Genre</label>	
+			</div>
+		</div>
+			
 			
 		<div data-role="collapsible-set">
 			<div data-role="collapsible" data-collapsed="true" data-theme="b">
@@ -219,6 +237,7 @@
 		<div data-role="footer" data-position="fixed" data-id="page2">
 			<div data-role="navbar">
 				<ul>
+					<li><a href="#search" data-mini="true"  value="search" id="search" data-ajax="false">Search</a></li>
 					<li><a href="#by_genre" >By Genre</a></li>
 					<li><a href="#by_author" >By Author</a></li>
 					<li><a href="#by_title" >By Title</a></li>
@@ -228,11 +247,17 @@
 	</div>
 	
 <!-- Browse by Author Page -->
-	<div data-role="page" id="by_author" data-add-back-btn="true">
-		<div data-role="header" data-position="fixed">
-			<h1>By Author</h1>
-		</div>		
-		<div data-role="content">		
+	<div data-role="page" id="by_author" >
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>
+				<label data-inline="true">By Author</label>	
+			</div>
+		</div>>	
+			
+		<div data-role="content" style=”background-image: url(images/WoodBackground.png)”>		
 			<div data-role="collapsible-set">
 				<div data-role="collapsible" data-collapsed="true" data-theme="b">
 					<h4>A - C</h4>
@@ -250,7 +275,7 @@
 				<div data-role="collapsible" data-collapsed="true" data-theme="b">
 					<h4>J - L</h4>
 					<p>Robert T. Kiyosaki</p>
-					<p>Robert E. Kowalski<p>
+					<p>Robert E. Kowalski</p>
 					<p>J. F. Lewis</p>
 				</div>
 				<div data-role="collapsible" data-collapsed="true" data-theme="b">
@@ -283,6 +308,7 @@
 		<div data-role="footer" data-position="fixed" data-id="page2">
 			<div data-role="navbar">
 				<ul>
+					<li><a href="#search" data-mini="true"  value="search" id="search" data-ajax="false">Search</a></li>
 					<li><a href="#by_genre" >By Genre</a></li>
 					<li><a href="#by_author" >By Author</a></li>
 					<li><a href="#by_title" >By Title</a></li>
@@ -292,11 +318,17 @@
 	</div>
 	
 <!-- Browse by Title Page -->
-	<div data-role="page" id="by_title" data-add-back-btn="true">
-		<div data-role="header" data-position="fixed">
-			<h1>By Title</h1>
-		</div>		
-		<div data-role="content">
+	<div data-role="page" id="by_title" >
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>
+				<label data-inline="true">By Title</label>	
+			</div>
+		</div>	
+			
+		<div data-role="content" style=”background-image: url(images/WoodBackground.png)”>
 			<div data-role="collapsible-set">
 				<div data-role="collapsible" data-collapsed="true" data-theme="b">
 					<h4>A - C</h4>
@@ -318,7 +350,7 @@
 				<div data-role="collapsible" data-collapsed="true" data-theme="b">
 					<h4>J - L</h4>
 					<p>Javascript Cookbook: Shelley Powers</p>
-					<p>Javescript In Easy Steps: Mike McGrath<p>
+					<p>Javescript In Easy Steps: Mike McGrath</p>
 
 				</div>
 				<div data-role="collapsible" data-collapsed="true" data-theme="b">
@@ -346,6 +378,7 @@
 		<div data-role="footer" data-position="fixed" data-id="page2">
 			<div data-role="navbar">
 				<ul>
+					<li><a href="#search" data-mini="true"  value="search" id="search" data-ajax="false">Search</a></li>
 					<li><a href="#by_genre" >By Genre</a></li>
 					<li><a href="#by_author" >By Author</a></li>
 					<li><a href="#by_title" >By Title</a></li>
@@ -355,55 +388,62 @@
 	</div>
 	
 <!-- Search -->
-	<div data-role="page" id="search" data-add-back-btn="true">
-		<div data-role="header" data-position="fixed">
-			<h1>Search</h1>
-		</div>	
+	<div data-role="page" id="search" >
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<div>
+				<a href="#home" alt="home" data-inline="true" data-ajax="false">
+					<img src="images/BookTrackerLogo.png" height="60" width="160" data-inline="true" />
+				</a>
+				<label data-inline="true">Search</label>	
+			</div>
+		</div>		
 			
-		<div data-role="content">
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<ol >
-  					<img src="images/art & photography.png"/> Art & Photography<br>
-  					<img src="images/Computers & Technology.png"/>Computers & Technology<br>
- 					<img src="images/Education & Reference.png"/>Education & Reference<br>
-					<img src="images/Horror.png"/>Horror<br>
-					<img src="images/Literature & Fiction.png"/>Literature & Fiction<br>
-  					<img src="images/Medical.png"/>Medical<br>
-  					<img src="images/Religion & Spirituality.png"/>Religion & Spirituality<br>
-  					<img src="images/Self Help.png"/>Self Help<br>
-  					<img src="images/Travel.png"/>Travel<br>
-  				</ol>
+		<div data-role="content" style=”background-image: url(images/WoodBackground.png)”>
+			<div class="ui-grid-b">
+				<div class="ui-block-a">
+					<ol>
+  						<img src="images/art & photography.png"/> Art & Photography<br /> 
+  						<img src="images/Computers & Technology.png"/>Computers & Technology<br />
+ 						<img src="images/Education & Reference.png"/>Education & Reference<br />
+						<img src="images/Horror.png"/>Horror<br />
+						<img src="images/Literature & Fiction.png"/>Literature & Fiction<br />
+  						<img src="images/Medical.png"/>Medical<br />
+  						<img src="images/Religion & Spirituality.png"/>Religion & Spirituality<br />
+  						<img src="images/Self Help.png"/>Self Help<br />
+  						<img src="images/Travel.png"/>Travel<br />
+  					</ol>
+  				</div>
   			</div>
 			<div class="ui-block-b">
 				<ol>
-  					<img src="images/biographies & memoirs.png"/>Biographies & Memoirs<br>
-  					<img src="images/Cookbooks, Food & Wine.png"/>Cookbooks, Food & Wine<br>
- 					<img src="images/Health, Fitness & Dieting.png"/>Health, Fitness & Dieting<br>
-					<img src="images/Humor.png"/>Humor<br>
-					<img src="images/Manga & Graphic Novels.png"/>Manga & Graphic Novels<br>
-  					<img src="images/Mystery, Crime, Thriller & Suspense.png"/>Mystery, Crime, Thriller & Suspense<br>
-  					<img src="images/Romance.png"/>Romance<br>
-  					<img src="images/Sports & Outdoors.png"/>Sports & Outdoors<br>
-  					<img src="images/Western.png"/>Western<br>
+  					<img src="images/biographies & memoirs.png"/>Biographies & Memoirs<br />
+  					<img src="images/Cookbooks, Food & Wine.png"/>Cookbooks, Food & Wine<br />
+ 					<img src="images/Health, Fitness & Dieting.png"/>Health, Fitness & Dieting<br />
+					<img src="images/Humor.png"/>Humor<br />
+					<img src="images/Manga & Graphic Novels.png"/>Manga & Graphic Novels<br />
+  					<img src="images/Mystery, Crime, Thriller & Suspense.png"/>Mystery, Crime, Thriller & Suspense<br />
+  					<img src="images/Romance.png"/>Romance<br />
+  					<img src="images/Sports & Outdoors.png"/>Sports & Outdoors<br />
+  					<img src="images/Western.png"/>Western<br />
 				</ol>
 			</div>
 			<div class="ui-block-c">
 				<ol>
-					<img src="images/children's books.png"/>Children's Books<br>
-  					<img src="images/Crafts, Hobbies & Home.png"/>Crafts, Hobbies & Home<br>
- 					<img src="images/History.png"/>History<br>
-					<img src="images/Law.png"/>Law<br>
-					<img src="images/Math & Science.png"/>Math & Science<br>
-  					<img src="images/Parenting & Relationships.png"/>Parenting & Relationships<br>
-  					<img src="images/Sci Fi & Fantasy.png"/>Sci Fi & Fantasy<br>
-  					<img src="images/Teens.png"/>Teens<br>
+					<img src="images/children's books.png"/>Children's Books<br />
+  					<img src="images/Crafts, Hobbies & Home.png"/>Crafts, Hobbies & Home<br />
+ 					<img src="images/History.png"/>History<br />
+					<img src="images/Law.png"/>Law<br />
+					<img src="images/Math & Science.png"/>Math & Science<br />
+  					<img src="images/Parenting & Relationships.png"/>Parenting & Relationships<br />
+  					<img src="images/Sci Fi & Fantasy.png"/>Sci Fi & Fantasy<br />
+  					<img src="images/Teens.png"/>Teens<br />
 				</ol>
 			</div>
            </div>
 		<div data-role="footer" data-position="fixed" data-id="page2">
 			<div data-role="navbar">
 				<ul>
+					<li><a href="#search" data-mini="true"  value="search" id="search" data-ajax="false">Search</a></li>
 					<li><a href="#by_genre" >By Genre</a></li>
 					<li><a href="#by_author" >By Author</a></li>
 					<li><a href="#by_title" >By Title</a></li>
