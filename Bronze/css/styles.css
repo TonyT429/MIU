@@ -66,3 +66,7 @@ input {
 label {
 	position: center;
 }
+
+html {
+	background-image: url(images/WoodBackground.png);
+}
