@@ -56,6 +56,8 @@ p {
 	font: verdana, tehoma, geneva ;
 }
 
+// Seems to be an issue with the RSS Feed overriding my colors.
+
 a {
 	color: yellow;
 	font-style: arial unicode ms;
